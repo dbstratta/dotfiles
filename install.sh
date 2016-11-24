@@ -15,10 +15,20 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . "$DOTFILES_DIR/install/bash.sh"
 . "$DOTFILES_DIR/install/npm.sh"
 
-# Bunch of symlinks
+# Dotfiles to symlink
 
-ln -sfv "$DOTFILES_DIR/dotfiles/.bashrc" ~
-ln -sfv "$DOTFILES_DIR/dotfiles/.tmux.conf" ~
+dotfiles=(
+  ".bashrc"
+  ".bash_aliases"
+  ".tmux.conf"
+  ".gitconfig"
+)
+
+# Make the symlinks
+
+for dotfile in ${dotfiles[@]}; do
+  ln -sfv "$DOTFILES_DIR/dotfiles/$dotfile" ~
+done
 
 # More symlinks
 
