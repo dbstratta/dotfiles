@@ -1,0 +1,15 @@
+[user]
+	name = Diego Stratta
+	email = strattadb@gmail.com
+
+[core]
+	editor = vim
+
+[alias]
+	a = add
+	br = branch
+	co = checkout
+	ci = commit -m
+	d = diff
+	s = status
+	un = reset HEAD
