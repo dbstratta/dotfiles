@@ -1,7 +1,13 @@
 #!/usr/bin/bash
 
-# Repositories
+## Repositories
+# Adapta GTK theme
 sudo apt-add-repository -y ppa:tista/adapta
+# Paper icon theme
+sudo apt-add-repository -y ppa:snwh/pulp
+# Google Chrome
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 
 # Packages
 apps=(
@@ -10,8 +16,11 @@ apps=(
   nodejs
   npm
   vim
+  google-chrome-stable
+  firefox
   unity-tweak-tool
   adapta-gtk-theme
+  paper-icon-theme
 )
 
 # Update & upgrade
