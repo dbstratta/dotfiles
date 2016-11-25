@@ -12,7 +12,7 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Package managers & packages
 
-. "$DOTFILES_DIR/install/bash.sh"
+. "$DOTFILES_DIR/install/apt.sh"
 . "$DOTFILES_DIR/install/npm.sh"
 
 # Dotfiles to symlink
