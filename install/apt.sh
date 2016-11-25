@@ -11,4 +11,7 @@ apps=(
   unity-tweak-tool
 )
 
+sudo apt update
+sudo apt upgrade -y
+
 sudo apt install -y "${apps[@]}"
