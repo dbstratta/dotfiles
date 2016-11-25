@@ -32,4 +32,4 @@ done
 
 # More symlinks
 
-sudo ln -s "$(which nodejs)" /usr/bin/node
+sudo ln -sf "$(which nodejs)" /usr/bin/node
