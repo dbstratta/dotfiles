@@ -8,7 +8,7 @@ apps=(
   nodejs
   npm
   vim
-  google-chrome-stable
+  unity-tweak-tool
 )
 
-sudo apt install "${apps[@]}"
+sudo apt install -y "${apps[@]}"
