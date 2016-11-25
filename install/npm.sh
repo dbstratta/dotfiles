@@ -7,4 +7,4 @@ packages=(
   bower
 )
 
-npm install -g "${packages[@]}"
+sudo npm install -g "${packages[@]}"
