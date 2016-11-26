@@ -25,6 +25,7 @@ DOTFILES_DIR="$( builtin cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 dotfiles=(
   ".bashrc"
   ".bash_aliases"
+  ".vimrc"
   ".tmux.conf"
   ".gitconfig"
 )
