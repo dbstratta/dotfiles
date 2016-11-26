@@ -19,6 +19,7 @@ apps=(
   nodejs
   npm
   vim
+  ruby
   google-chrome-stable
   firefox
   nvidia-340
