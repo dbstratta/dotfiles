@@ -11,5 +11,6 @@
 	co = checkout
 	ci = commit -m
 	d = diff
+	me = merge
 	s = status
 	un = reset HEAD
