@@ -12,8 +12,13 @@ DOTFILES_DIR="$( builtin cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Package managers & packages
 
-. "$DOTFILES_DIR/install/apt.sh"
-. "$DOTFILES_DIR/install/npm.sh"
+. "$DOTFILES_DIR/packages/apt.sh"
+. "$DOTFILES_DIR/packages/npm.sh"
+. "$DOTFILES_DIR/packages/gems.sh"
+
+# Settings
+
+. "$DOTFILES_DIR/settings.sh"
 
 # Dotfiles to symlink
 
