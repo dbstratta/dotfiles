@@ -22,8 +22,6 @@ apps=(
   ruby
   google-chrome-stable
   firefox
-  nvidia-340
-  intel-microcode
   unity-tweak-tool
   adapta-gtk-theme
   paper-icon-theme
