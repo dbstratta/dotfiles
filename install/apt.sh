@@ -1,5 +1,8 @@
 #!/usr/bin/bash
 
+# Remove previously added repositories (to remain idempontent)
+sudo rm -f /etc/apt/sources.list.d/*
+
 ## Repositories
 # Adapta GTK theme
 sudo apt-add-repository -y ppa:tista/adapta
