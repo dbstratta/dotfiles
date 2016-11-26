@@ -9,7 +9,7 @@ but I haven't tested it.
 
 ## Prerequisites
 
-To clone the repository you'll need Git.
+To clone the repository you'll need [Git](https://git-scm.com/).
 
 ### Debian / Ubuntu
 
@@ -31,5 +31,8 @@ $ . install.sh
 
 * Disable showing the Ubuntu HUD with Alt key.
 `Settings -> Keyboard -> Shortcuts -> Key to show the HUD`.
+
+* Set up SSH keys to [GitHub](https://github.com/settings/keys),
+[Bitbucket](https://bitbucket.org), etc.
 
 * You may want to install proprietary drivers.
