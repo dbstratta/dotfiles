@@ -15,6 +15,7 @@ DOTFILES_DIR="$( builtin cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . "$DOTFILES_DIR/packages/apt.sh"
 . "$DOTFILES_DIR/packages/npm.sh"
 . "$DOTFILES_DIR/packages/gems.sh"
+. "$DOTFILES_DIR/packages/apm.sh"
 
 # Settings
 
@@ -23,6 +24,7 @@ DOTFILES_DIR="$( builtin cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Dotfiles to symlink
 
 dotfiles=(
+  ".atom"
   ".bashrc"
   ".bash_aliases"
   ".vimrc"
