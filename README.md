@@ -4,7 +4,8 @@
 
 As of today, it works only on Debian / Ubuntu with Unity 7.
 
-It should still work with other desktop environments, but I haven't tested it.
+It should still work with other desktop environments,
+but I haven't tested it.
 
 ## Prerequisites
 
@@ -28,4 +29,7 @@ $ . install.sh
 
 ## After the installation
 
-You may want to install propietary drivers.
+* Disable showing the Ubuntu HUD with Alt key.
+`Settings -> Keyboard -> Shortcuts -> Key to show the HUD`.
+
+* You may want to install proprietary drivers.
