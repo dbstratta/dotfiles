@@ -7,6 +7,9 @@ alias ....='cd ../../..'
 # Git aliases
 alias s='git status'
 
+# Tmuxinator alias
+alias mux='tmuxinator'
+
 # Do ls after every cd
 function cd {
   builtin cd "$@" && ls
