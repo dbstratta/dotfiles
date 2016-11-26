@@ -1,0 +1,9 @@
+"*":
+  core:
+    openEmptyEditorOnStart: false
+    telemetryConsent: "limited"
+  editor:
+    scrollPastEnd: true
+    zoomFontWhenCtrlScrolling: false
+  welcome:
+    showOnStartup: false
