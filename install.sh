@@ -24,7 +24,6 @@ DOTFILES_DIR="$( builtin cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Dotfiles to symlink
 
 dotfiles=(
-  ".atom"
   ".bashrc"
   ".bash_aliases"
   ".vimrc"
@@ -37,6 +36,9 @@ dotfiles=(
 for dotfile in ${dotfiles[@]}; do
   ln -sfv "$DOTFILES_DIR/dotfiles/$dotfile" ~
 done
+
+# Atom editor config.cson symlink
+ln -sfv "$DOTFILES_DIR/dotfiles/.atom/config.cson" ~/.atom
 
 # More symlinks
 
