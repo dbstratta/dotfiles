@@ -29,9 +29,6 @@ $ . install.sh
 
 ## After the installation
 
-* Disable showing the Ubuntu HUD with Alt key.
-`Settings -> Keyboard -> Shortcuts -> Key to show the HUD`.
-
 * Set up SSH keys to [GitHub](https://github.com/settings/keys),
 [Bitbucket](https://bitbucket.org), etc.
 
