@@ -17,9 +17,10 @@ DOTFILES_DIR="$( builtin cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . "$DOTFILES_DIR/packages/gems.sh"
 . "$DOTFILES_DIR/packages/apm.sh"
 
-# Settings
+# Settings and fonts
 
 . "$DOTFILES_DIR/settings.sh"
+. "$DOTFILES_DIR/fonts/setup.sh"
 
 # Dotfiles to symlink
 
