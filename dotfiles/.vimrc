@@ -30,7 +30,7 @@ filetype plugin indent on
 
 set timeoutlen=1000 ttimeoutlen=0
 
-
+set encoding=utf-8
 " Always show statusline
 set laststatus=2
 " Hide default mode text (e.g. -- INSERT -- below the statusline)
@@ -39,3 +39,6 @@ set noshowmode
 set showtabline=2
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
+" Set font
+set guifont=Roboto\ Mono\ for\ Powerline
+let g:Powerline_symbols = 'fancy'
