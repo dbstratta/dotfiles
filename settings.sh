@@ -12,3 +12,15 @@ sudo sh -c "echo 'EndSection' >> /usr/share/X11/xorg.conf.d/90-mouse.conf"
 gsettings set org.gnome.desktop.interface gtk-theme 'Adapta'
 gsettings set org.gnome.desktop.wm.preferences theme 'Adapta'
 gsettings set org.gnome.desktop.interface icon-theme 'Paper'
+
+# Disable show HUD with Alt
+gsettings set org.compiz.integrated show-hud '[""]'
+
+# Set terminal font
+gsettings set org.gnome.desktop.interface monospace-font-name 'Roboto Mono for Powerline 11'
+
+# Hide keyboard icon in top bar
+gsettings set com.canonical.indicator.keyboard visible false
+
+# gsettings set org.gnome.desktop.interface font-name 'font name'
+# gsettings set org.gnome.desktop.wm titlebar-uses-system-font true
