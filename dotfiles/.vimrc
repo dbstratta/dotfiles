@@ -18,6 +18,9 @@ Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 " NERDTree
 Plugin 'scrooloose/nerdtree'
 
+" Auto pair brackets, etc
+Plugin 'jiangmiao/auto-pairs'
+
 " Vim Polyglot syntax highlighting
 Plugin 'sheerun/vim-polyglot'
 
@@ -53,8 +56,27 @@ set number
 " Show ruler at column 80
 set colorcolumn=80
 
+" Indentation stuff
+" Python
+autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
+
+" Changes width of TAB character
+set tabstop=2
+" Number of spaces of each step of autoindent
+set shiftwidth=2
+" Don't use actual tab characters
+set expandtab
+" Affects what happens whith <TAB> and <BS> keys with indentation
+set softtabstop=2
+
+set autoindent
+set smartindent
+
 " Syntax highlighting
 syntax on
 set background=dark
 let g:onedark_termcolors=256
 colorscheme onedark
+
+" Disable auto-pairs shortcuts
+let g:AutoPairsShortcutToggle = ''
