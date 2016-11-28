@@ -22,5 +22,7 @@ gsettings set org.gnome.desktop.interface monospace-font-name 'Roboto Mono for P
 # Hide keyboard icon in top bar
 gsettings set com.canonical.indicator.keyboard visible false
 
+# Show the menu in window's title bar
+gsettings set com.canonical.Unity integrated-menus true
 # gsettings set org.gnome.desktop.interface font-name 'font name'
 # gsettings set org.gnome.desktop.wm titlebar-uses-system-font true
