@@ -50,6 +50,8 @@ set guifont=Roboto\ Mono\ for\ Powerline
 let g:Powerline_symbols = 'fancy'
 " Show line number
 set number
+" Show ruler at column 80
+set colorcolumn=80
 
 " Syntax highlighting
 syntax on
