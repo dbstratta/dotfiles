@@ -18,6 +18,12 @@ Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 " NERDTree
 Plugin 'scrooloose/nerdtree'
 
+" Vim Polyglot syntax highlighting
+Plugin 'sheerun/vim-polyglot'
+
+" One Dark colorscheme
+Plugin 'joshdick/onedark.vim'
+
 " all of your plugins must be added before the following line
 
 " required
@@ -42,3 +48,11 @@ set t_Co=256
 " Set font
 set guifont=Roboto\ Mono\ for\ Powerline
 let g:Powerline_symbols = 'fancy'
+" Show line number
+set number
+
+" Syntax highlighting
+syntax on
+set background=dark
+let g:onedark_termcolors=256
+colorscheme onedark
