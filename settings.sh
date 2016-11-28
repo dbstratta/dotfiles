@@ -13,6 +13,9 @@ gsettings set org.gnome.desktop.interface gtk-theme 'Adapta'
 gsettings set org.gnome.desktop.wm.preferences theme 'Adapta'
 gsettings set org.gnome.desktop.interface icon-theme 'Paper'
 
+# Set Unity Launcher favorites
+gsettings set com.canonical.Unity.Launcher favorites '["application://org.gnome.Nautilus.desktop", "application://google-chrome.desktop", "application://atom.desktop"]'
+
 # Disable show HUD with Alt
 gsettings set org.compiz.integrated show-hud '[""]'
 
@@ -24,5 +27,5 @@ gsettings set com.canonical.indicator.keyboard visible false
 
 # Show the menu in window's title bar
 gsettings set com.canonical.Unity integrated-menus true
-# gsettings set org.gnome.desktop.interface font-name 'font name'
-# gsettings set org.gnome.desktop.wm titlebar-uses-system-font true
+# gsettings set org.gnome.desktop.interface font-name 'Roboto 11'
+# gsettings set org.gnome.desktop.wm.preferences titlebar-uses-system-font true
