@@ -33,6 +33,3 @@ gsettings set com.canonical.Unity integrated-menus true
 # gsettings set org.gnome.desktop.interface font-name 'Roboto 11'
 # gsettings set org.gnome.desktop.wm.preferences titlebar-uses-system-font true
 
-# Build YouCompleteMe
-python3 ~/.vim/plugged/YouCompleteMe/install.py \
-  --clang-completer --tern-completer
