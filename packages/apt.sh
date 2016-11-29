@@ -22,6 +22,9 @@ apps=(
   npm
   vim
   ruby
+  build-essential
+  cmake
+  python3-dev
   atom
   google-chrome-stable
   firefox
