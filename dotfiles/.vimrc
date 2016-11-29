@@ -68,6 +68,8 @@ syntax on
 set background=dark
 let g:onedark_termcolors=256
 colorscheme onedark
+" Highlight current line
+set cursorline
 
 " Diable autocomplete preview window
 set completeopt-=preview
