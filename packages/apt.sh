@@ -24,6 +24,7 @@ apps=(
   ruby
   build-essential
   cmake
+  clang-3.9
   python3-dev
   atom
   google-chrome-stable
