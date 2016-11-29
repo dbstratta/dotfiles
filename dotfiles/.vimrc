@@ -18,6 +18,9 @@ Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 " NERDTree
 Plugin 'scrooloose/nerdtree'
 
+" YouCompleteMe
+Plugin 'Valloric/YouCompleteMe'
+
 " Auto pair brackets, etc
 Plugin 'jiangmiao/auto-pairs'
 
@@ -80,3 +83,6 @@ colorscheme onedark
 
 " Disable auto-pairs shortcuts
 let g:AutoPairsShortcutToggle = ''
+
+" Make YouCompleteMe work
+let g:ycm_server_python_interpreter = '/usr/bin/python3'
