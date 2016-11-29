@@ -1,42 +1,30 @@
 " be iMproved, required
 set nocompatible
 
-" required
-filetype off
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " Powerline
-Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " NERDTree
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 
 " YouCompleteMe
-Plugin 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
 
 " Auto pair brackets, etc
-Plugin 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs'
 
 " Vim Polyglot syntax highlighting
-Plugin 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot'
 
 " One Dark colorscheme
-Plugin 'joshdick/onedark.vim'
+Plug 'joshdick/onedark.vim'
 
 " all of your plugins must be added before the following line
 
 " required
-call vundle#end()
-
-" required
-filetype plugin indent on
+call plug#end()
 
 " put your non-plugin stuff after this line
 
