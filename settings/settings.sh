@@ -1,5 +1,8 @@
 #!/usr/bin/bash
 
+# Make a symlink from nodejs to node
+sudo ln -sfv "$(which nodejs)" /usr/bin/node
+
 # Disable mouse acceleration
 sudo sh -c "echo 'Section \"InputClass\"' >> /usr/share/X11/xorg.conf.d/90-mouse.conf"
 sudo sh -c "echo '    Identifier \"mouse\"' >> /usr/share/X11/xorg.conf.d/90-mouse.conf"
@@ -29,3 +32,7 @@ gsettings set com.canonical.indicator.keyboard visible false
 gsettings set com.canonical.Unity integrated-menus true
 # gsettings set org.gnome.desktop.interface font-name 'Roboto 11'
 # gsettings set org.gnome.desktop.wm.preferences titlebar-uses-system-font true
+
+# Build YouCompleteMe
+python3 ~/.vim/plugged/YouCompleteMe/install.py \
+  --clang-completer --tern-completer
