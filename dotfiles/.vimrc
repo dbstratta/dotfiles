@@ -10,7 +10,7 @@ Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plug 'scrooloose/nerdtree'
 
 " YouCompleteMe
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', {'do': 'python3 ./install.py --clang-completer --tern-completer'}
 
 " Auto pair brackets, etc
 Plug 'jiangmiao/auto-pairs'
