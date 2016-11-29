@@ -6,6 +6,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 vim -E -c PlugInstall -c qall
 
 # Download Tmux Plugin Manager
+rm -rf ~/.tmux/plugins/tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Download and install Tmux plugins
