@@ -30,7 +30,6 @@ dotfiles=(
   ".bash_aliases"
   ".vimrc"
   ".tmux.conf"
-  ".tmuxinator"
   ".tern-config"
   ".gitconfig"
 )
@@ -43,4 +42,10 @@ done
 
 # Atom editor config.cson symlink
 ln -sfv "$DOTFILES_DIR/dotfiles/.atom/config.cson" ~/.atom
+
+# .tmuxinator layouts
+mkdir -p ~/.tmuxinator
+for file in dotfiles/.tmuxinator/*; do
+  ln -sfv "$file" ~/.tmuxinator
+done
 
