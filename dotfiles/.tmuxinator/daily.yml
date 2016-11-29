@@ -1,0 +1,20 @@
+# ~/.tmuxinator/daily.yml
+
+name: daily
+root: ~/
+startup_window: main
+startup_pane: 1
+
+windows:
+  - main:
+      layout: main-vertical
+      panes:
+        -
+        -
+        -
+  - editor: $EDITOR
+  - misc:
+      layout: main-vertical
+      panes:
+        -
+        -
