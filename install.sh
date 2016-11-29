@@ -19,7 +19,8 @@ DOTFILES_DIR="$( builtin cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Settings and fonts
 
-. "$DOTFILES_DIR/settings.sh"
+. "$DOTFILES_DIR/settings/downloads.sh"
+. "$DOTFILES_DIR/settings/settings.sh"
 . "$DOTFILES_DIR/fonts/setup.sh"
 
 # Dotfiles to symlink
@@ -29,6 +30,8 @@ dotfiles=(
   ".bash_aliases"
   ".vimrc"
   ".tmux.conf"
+  ".tmuxinator",
+  ".tern-config",
   ".gitconfig"
 )
 
@@ -41,6 +44,3 @@ done
 # Atom editor config.cson symlink
 ln -sfv "$DOTFILES_DIR/dotfiles/.atom/config.cson" ~/.atom
 
-# More symlinks
-
-sudo ln -sf "$(which nodejs)" /usr/bin/node
