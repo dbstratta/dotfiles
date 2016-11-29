@@ -30,8 +30,8 @@ dotfiles=(
   ".bash_aliases"
   ".vimrc"
   ".tmux.conf"
-  ".tmuxinator",
-  ".tern-config",
+  ".tmuxinator"
+  ".tern-config"
   ".gitconfig"
 )
 
