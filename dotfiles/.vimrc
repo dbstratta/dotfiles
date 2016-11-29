@@ -81,6 +81,8 @@ set background=dark
 let g:onedark_termcolors=256
 colorscheme onedark
 
+" Diable autocomplete preview window
+set completeopt-=preview
 " Disable auto-pairs shortcuts
 let g:AutoPairsShortcutToggle = ''
 
