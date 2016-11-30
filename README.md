@@ -9,9 +9,11 @@ but I haven't tested it.
 
 ## Prerequisites
 
+### Install Git
+
 To clone the repository you'll need [Git](https://git-scm.com/).
 
-### Debian / Ubuntu
+#### Debian / Ubuntu
 
 ```shell
 $ sudo apt install git
