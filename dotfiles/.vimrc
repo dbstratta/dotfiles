@@ -9,8 +9,14 @@ Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 " NERDTree
 Plug 'scrooloose/nerdtree'
 
+" CtrlP
+Plug 'ctrlpvim/ctrlp.vim'
+
 " YouCompleteMe
 Plug 'Valloric/YouCompleteMe', {'do': 'python3 ./install.py --clang-completer --tern-completer'}
+
+" Vim Gitgutter
+Plug 'airblade/vim-gitgutter'
 
 " Auto pair brackets, etc
 Plug 'jiangmiao/auto-pairs'
@@ -77,6 +83,8 @@ colorscheme onedark
 set cursorline
 " Highlight search
 set hlsearch
+" Clear search highlight with double Esc
+nnoremap <silent> <Esc><Esc> <Esc>:noh<CR><Esc>
 
 " Remap pane navigation
 nmap <silent> <c-k> :wincmd k<CR>
@@ -91,6 +99,10 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
 " Close NERDTree if it's the only window left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Remap CtrlP invokes
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 
 " Diable autocomplete preview window
 set completeopt-=preview
