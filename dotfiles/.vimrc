@@ -47,10 +47,15 @@ set number
 " Show ruler at column 80
 set colorcolumn=80
 
+" Keep lines above and below the cursor when scrolling
+set scrolloff=8
+
 " Indentation stuff
 " Python
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
 
+" Make tabs smarter (I'm not sure if this one, though)
+set smarttab
 " Changes width of TAB character
 set tabstop=2
 " Number of spaces of each step of autoindent
@@ -70,6 +75,8 @@ let g:onedark_termcolors=256
 colorscheme onedark
 " Highlight current line
 set cursorline
+" Highlight search
+set hlsearch
 
 " Diable autocomplete preview window
 set completeopt-=preview
