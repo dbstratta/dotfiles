@@ -7,6 +7,16 @@ As of today, it works only on Debian / Ubuntu with Unity 7.
 It should still work with other desktop environments,
 but I haven't tested it.
 
+### Note
+
+If you're in one of your machines,
+[generate a SSH](https://help.github.com/articles/generating-an-ssh-key/)
+key and clone the repo with:
+
+```shell
+git clone ssh://git@github.com/strattadb/dotfiles
+```
+
 ## Prerequisites
 
 ### Install Git
