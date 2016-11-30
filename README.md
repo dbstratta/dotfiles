@@ -29,7 +29,4 @@ $ . install.sh
 
 ## After the installation
 
-* Set up SSH keys to [GitHub](https://github.com/settings/keys),
-[Bitbucket](https://bitbucket.org), etc.
-
 * You may want to install proprietary drivers.
