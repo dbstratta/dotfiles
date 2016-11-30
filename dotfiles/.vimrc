@@ -78,6 +78,20 @@ set cursorline
 " Highlight search
 set hlsearch
 
+" Remap pane navigation
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
+
+" Open NERDTree when vim starts with no file specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" Toggle NERDTree with Ctrl + n
+map <C-n> :NERDTreeToggle<CR>
+" Close NERDTree if it's the only window left
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 " Diable autocomplete preview window
 set completeopt-=preview
 " Disable auto-pairs shortcuts
