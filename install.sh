@@ -44,8 +44,9 @@ done
 ln -sfv "$DOTFILES_DIR/dotfiles/.atom/config.cson" ~/.atom
 
 # .tmuxinator layouts
+MUX_LAYOUTS=$DOTFILES_DIR/dotfiles/.tmuxinator/*
+
 mkdir -p ~/.tmuxinator
-for file in dotfiles/.tmuxinator/*; do
+for file in $MUX_LAYOUTS; do
   ln -sfv "$file" ~/.tmuxinator
 done
-
