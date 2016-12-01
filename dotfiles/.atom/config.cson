@@ -1,6 +1,5 @@
 "*":
   core:
-    openEmptyEditorOnStart: false
     telemetryConsent: "limited"
   editor:
     scrollPastEnd: true
