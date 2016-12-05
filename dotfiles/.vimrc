@@ -85,6 +85,8 @@ set cursorline
 set hlsearch
 " Clear search highlight with double Esc
 nnoremap <silent> <Esc><Esc> <Esc>:noh<CR><Esc>
+" Highlight Vue Components syntax
+au BufRead,BufNewFile *.vue setfiletype html
 
 " Remap pane navigation
 nmap <silent> <c-k> :wincmd k<CR>
