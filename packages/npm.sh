@@ -3,6 +3,7 @@
 # Globally install with npm
 
 packages=(
+  webpack@beta
   gulp-cli
   bower
 )
