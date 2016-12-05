@@ -3,6 +3,7 @@
 packages=(
   file-icons
   minimap
+  language-vue
 )
 
 # Install packages
