@@ -5,12 +5,47 @@
 [core]
 	editor = vim
 
+[color]
+  ui = true
+
+[color "branch"]
+  current = yellow bold
+  local = green bold
+  remote = cyan bold
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+  whitespace = red reverse
+
+[color "status"]
+  added = green bold
+  changed = yellow bold
+  untracked = red bold
+
+[github]
+  user = strattadb
+
+[url "https://github.com/"]
+  insteadOf = gh:
+
+[url "ssh://git@github.com/"]
+  insteadOf = ghs
+
+[web]
+  browser = google-chrome
+
 [alias]
 	a = add
 	br = branch
 	co = checkout
 	ci = commit -m
 	d = diff
+  l = log --oneline
+  ps = push
+  pl = pull
 	me = merge
 	s = status
 	un = reset HEAD
