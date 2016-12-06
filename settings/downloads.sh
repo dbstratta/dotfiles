@@ -2,13 +2,11 @@
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-# Downloads Vim Plug Bundle Managar for Neovim
-curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
-  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# Remove unused Vim plugins (to remain idempotent)
+vim -E -c PlugClean! -c qall
 
 # Clone bundle repositories with Vim Plug and install them
 vim -E -c PlugInstall -c qall
-nvim -E -c PlugInstall -c qall
 
 # Download Tmux Plugin Manager
 rm -rf ~/.tmux/plugins/tpm
