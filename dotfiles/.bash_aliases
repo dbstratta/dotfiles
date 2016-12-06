@@ -11,6 +11,6 @@ alias s='git status'
 alias mux='tmuxinator'
 
 # Do ls after every cd
-function cd {
+function c {
   builtin cd "$@" && ls
 }
