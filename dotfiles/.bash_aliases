@@ -5,6 +5,10 @@ alias ..='c ..'
 alias ...='c ../..'
 alias ....='c ../../..'
 
+# APT aliases
+alias upd='sudo apt update'
+alias upg='sudo apt upgrade'
+
 # Git aliases
 alias g='git'
 alias s='git status'
