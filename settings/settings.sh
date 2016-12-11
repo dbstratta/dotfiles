@@ -23,7 +23,7 @@ gsettings set com.canonical.Unity.Launcher favorites '["application://org.gnome.
 gsettings set org.compiz.integrated show-hud '[""]'
 
 # Set terminal font
-gsettings set org.gnome.desktop.interface monospace-font-name 'Roboto Mono for Powerline 11'
+gsettings set org.gnome.desktop.interface monospace-font-name 'Roboto Mono for Powerline 10'
 
 # Hide keyboard icon in top bar
 gsettings set com.canonical.indicator.keyboard visible false
