@@ -4,6 +4,7 @@
 
 packages=(
   webpack@beta
+  webpack-dev-server@beta
   gulp-cli
   bower
 )
