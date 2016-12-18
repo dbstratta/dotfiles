@@ -13,6 +13,9 @@ sudo add-apt-repository -y ppa:webupd8team/atom
 # Google Chrome
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo sh -c 'echo "deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+# Heroku CLI
+sudo add-apt-repository -y "deb https://cli-assets.heroku.com/branches/stable/apt ./"
+curl -L https://cli-assets.heroku.com/apt/release.key | sudo apt-key add -
 
 # Packages
 apps=(
@@ -29,6 +32,7 @@ apps=(
   atom
   google-chrome-stable
   firefox
+  heroku
   unity-tweak-tool
   adapta-gtk-theme
   paper-icon-theme
