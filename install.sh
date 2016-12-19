@@ -54,3 +54,12 @@ mkdir -p ~/.tmuxinator
 for file in $MUX_LAYOUTS; do
   ln -sfv "$file" ~/.tmuxinator
 done
+
+# Symlink autostart scripts
+AUTOSTART_SCRIPTS=$DOTFILES_DIR/autostart/*
+
+mkdir -p ~/.config/autostart
+for script in $AUTOSTART_SCRIPTS; do
+  ln -sfv "$script" ~/.config/autostart
+done
+

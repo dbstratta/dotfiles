@@ -11,9 +11,6 @@ sudo sh -c "echo '    Option \"AccelerationProfile\" \"-1\"' >> /usr/share/X11/x
 sudo sh -c "echo '    Option \"AccelerationScheme\" \"none\"' >> /usr/share/X11/xorg.conf.d/90-mouse.conf"
 sudo sh -c "echo 'EndSection' >> /usr/share/X11/xorg.conf.d/90-mouse.conf"
 
-# Remap Caps Lock to Escape (useful in Vim)
-setxkbmap -option caps:escape
-
 # Set GTK and Icon theme
 gsettings set org.gnome.desktop.interface gtk-theme 'Adapta'
 gsettings set org.gnome.desktop.wm.preferences theme 'Adapta'
