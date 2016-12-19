@@ -16,6 +16,7 @@ DOTFILES_DIR="$( builtin cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . "$DOTFILES_DIR/packages/npm.sh"
 . "$DOTFILES_DIR/packages/gems.sh"
 . "$DOTFILES_DIR/packages/apm.sh"
+. "$DOTFILES_DIR/packages/pip.sh"
 
 # Settings and fonts
 
@@ -42,6 +43,9 @@ done
 
 # Atom editor config.cson symlink
 ln -sfv "$DOTFILES_DIR/dotfiles/.atom/config.cson" ~/.atom
+
+# Neovim init.vim symlink
+ln -sfv "$DOTFILES_DIR/dotfiles/init.vim" ~/.config/nvim
 
 # .tmuxinator layouts
 MUX_LAYOUTS=$DOTFILES_DIR/dotfiles/.tmuxinator/*
