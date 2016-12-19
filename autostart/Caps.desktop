@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=setxkbmap -option caps:swapescape
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=CapsLock
+Name=CapsLock
+Comment[en_US]=Swap Escape and Caps Lock keys
+Comment=Swap Escape and Caps Lock keys
