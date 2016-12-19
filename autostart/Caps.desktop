@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=setxkbmap -option caps:swapescape
+Exec=sleep 5; setxkbmap -option caps:swapescape
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
