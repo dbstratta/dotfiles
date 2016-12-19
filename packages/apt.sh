@@ -8,6 +8,8 @@ sudo rm -f /etc/apt/sources.list.d/*
 sudo apt-add-repository -y ppa:tista/adapta
 # Paper icon theme
 sudo apt-add-repository -y ppa:snwh/pulp
+# Neovim editor
+sudo add-apt-repository -y ppa:neovim-ppa/unstable
 # Atom editor
 sudo add-apt-repository -y ppa:webupd8team/atom
 # Google Chrome
@@ -29,6 +31,7 @@ apps=(
   cmake
   python3-dev
   python3-pip
+  neovim
   atom
   google-chrome-stable
   firefox
