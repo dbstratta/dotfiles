@@ -21,8 +21,17 @@ Plug 'airblade/vim-gitgutter'
 " Auto pair brackets, etc
 Plug 'jiangmiao/auto-pairs'
 
+" Vim Syntastic
+Plug 'vim-syntastic/syntastic'
+
 " Vim Polyglot syntax highlighting
 Plug 'sheerun/vim-polyglot'
+
+" Vue component syntax highlighting
+Plug 'posva/vim-vue'
+
+" EditorConfig
+Plug 'editorconfig/editorconfig-vim'
 
 " One Dark colorscheme
 Plug 'joshdick/onedark.vim'
@@ -85,8 +94,9 @@ set cursorline
 set hlsearch
 " Clear search highlight with double Esc
 nnoremap <silent> <Esc><Esc> <Esc>:noh<CR><Esc>
+
 " Highlight Vue Components syntax
-au BufRead,BufNewFile *.vue setfiletype html
+" au BufRead,BufNewFile *.vue setfiletype html
 
 " Remap pane navigation
 nmap <silent> <c-k> :wincmd k<CR>

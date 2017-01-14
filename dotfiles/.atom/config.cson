@@ -2,6 +2,7 @@
   core:
     telemetryConsent: "limited"
   editor:
+    fontSize: 13
     scrollPastEnd: true
     zoomFontWhenCtrlScrolling: false
   welcome:
