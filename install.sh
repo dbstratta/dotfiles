@@ -14,7 +14,7 @@ DOTFILES_DIR="$( builtin cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 . "$DOTFILES_DIR/packages/apt.sh"
 . "$DOTFILES_DIR/packages/npm.sh"
-. "$DOTFILES_DIR/packages/gems.sh"
+. "$DOTFILES_DIR/packages/gem.sh"
 . "$DOTFILES_DIR/packages/apm.sh"
 . "$DOTFILES_DIR/packages/pip.sh"
 
