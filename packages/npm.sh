@@ -5,8 +5,9 @@
 packages=(
   webpack@beta
   webpack-dev-server@beta
+  karma-cli
+  eslint
   gulp-cli
-  bower
 )
 
 sudo npm install -g "${packages[@]}"
