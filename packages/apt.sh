@@ -18,6 +18,8 @@ sudo sh -c 'echo "deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stabl
 # Heroku CLI
 sudo add-apt-repository -y "deb https://cli-assets.heroku.com/branches/stable/apt ./"
 curl -L https://cli-assets.heroku.com/apt/release.key | sudo apt-key add -
+# Node.js
+curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
 
 # Packages
 apps=(
