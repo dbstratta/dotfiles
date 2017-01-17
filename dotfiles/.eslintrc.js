@@ -8,10 +8,10 @@ module.exports = {
   "extends": "eslint:recommended",
   "parserOptions": {
     "sourceType": "module",
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+    },
   },
-  "plugins": [
-    "html",
-  ],
   "rules": {
     "indent": ["error", 2, { "SwitchCase": 1 }],
     "linebreak-style": ["error", "unix"],
