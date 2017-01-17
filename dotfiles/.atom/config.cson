@@ -9,5 +9,7 @@
     scrollPastEnd: true
     zoomFontWhenCtrlScrolling: false
   linter: {}
+  "linter-eslint":
+    lintHtmlFiles: true
   welcome:
     showOnStartup: false
