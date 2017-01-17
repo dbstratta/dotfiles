@@ -10,6 +10,7 @@
     zoomFontWhenCtrlScrolling: false
   linter: {}
   "linter-eslint":
+    fixOnSave: true
     lintHtmlFiles: true
   welcome:
     showOnStartup: false
