@@ -1,9 +1,10 @@
 #!usr/bin/bash
 
 packages=(
+  vim-mode-plus
   file-icons
-  minimap
   linter
+  minimap
   language-vue
   language-pug
   editorconfig
