@@ -1,16 +1,36 @@
 "*":
+  "atom-clock": {}
   core:
-    disabledPackages: [
-      "minimap"
+    autoHideMenuBar: true
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "node_modules"
     ]
     telemetryConsent: "limited"
   editor:
     fontSize: 13
     scrollPastEnd: true
     zoomFontWhenCtrlScrolling: false
+  "git-plus":
+    general:
+      _analyticsUserId: "4593ebe6-e356-43f2-b619-51b3c842547b"
+      analytics: false
+      enableStatusBarIcon: false
   linter: {}
   "linter-eslint":
     fixOnSave: true
     lintHtmlFiles: true
+  "tree-view":
+    hideIgnoredNames: true
+  "vim-mode-plus":
+    clearHighlightSearchOnResetNormalMode: true
+    highlightSearch: true
+    stayOnYank: true
+    useClipboardAsDefaultRegister: true
   welcome:
     showOnStartup: false
