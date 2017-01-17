@@ -4,9 +4,12 @@ packages=(
   vim-mode-plus
   file-icons
   linter
-  minimap
+  git-plus
   language-vue
   language-pug
+  autoclose-html
+  pigments
+  atom-clock
   editorconfig
 )
 
