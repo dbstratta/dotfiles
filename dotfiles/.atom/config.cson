@@ -5,5 +5,7 @@
     fontSize: 13
     scrollPastEnd: true
     zoomFontWhenCtrlScrolling: false
+  linter:
+    showErrorPanel: false
   welcome:
     showOnStartup: false
