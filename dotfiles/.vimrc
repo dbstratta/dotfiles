@@ -87,7 +87,7 @@ set smartindent
 syntax on
 set background=dark
 let g:onedark_termcolors=256
-colorscheme onedark
+silent! colorscheme onedark
 " Highlight current line
 set cursorline
 " Highlight search
