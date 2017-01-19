@@ -1,5 +1,17 @@
 "*":
   "atom-clock": {}
+  "atom-material-ui":
+    colors:
+      abaseColor: "#7e57c2"
+      accentColor: "#b0e457"
+      genAccent: true
+      predefinedColor: "Purple"
+    fonts: {}
+    tabs: {}
+    treeView:
+      compactList: true
+    ui:
+      panelContrast: true
   core:
     autoHideMenuBar: true
     ignoredNames: [
@@ -12,6 +24,10 @@
       "node_modules"
     ]
     telemetryConsent: "limited"
+    themes: [
+      "atom-material-ui"
+      "one-dark-syntax"
+    ]
   editor:
     fontSize: 13
     scrollPastEnd: true
@@ -25,6 +41,7 @@
   "linter-eslint":
     fixOnSave: true
     lintHtmlFiles: true
+  "one-dark-ui": {}
   "tree-view":
     hideIgnoredNames: true
   "vim-mode-plus":
