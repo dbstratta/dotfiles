@@ -7,7 +7,9 @@ packages=(
   webpack-dev-server@beta
   karma-cli
   eslint
-  gulp-cli
 )
 
 sudo npm install -g "${packages[@]}"
+
+# Update all global packages, especially npm itself
+sudo npm update -g

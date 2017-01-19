@@ -8,11 +8,11 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
 # Remove unused Vim and Neovim plugins (to remain idempotent)
 vim -E -c PlugClean! -c qall
-nvim -E -c PlugClean! -c qall
+# nvim -E -c PlugClean! -c qall
 
 # Clone bundle repositories with Vim Plug and install them
 vim -E -c PlugInstall -c qall
-nvim -E -c PlugInstall -c qall
+# nvim -E -c PlugInstall -c qall
 
 # Download Tmux Plugin Manager
 rm -rf ~/.tmux/plugins/tpm

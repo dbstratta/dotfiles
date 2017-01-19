@@ -3,6 +3,7 @@
 # Packages
 packages=(
   neovim
+  pep8
 )
 
 # Update pip itself

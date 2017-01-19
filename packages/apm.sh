@@ -4,7 +4,6 @@ packages=(
   vim-mode-plus
   file-icons
   linter
-  git-plus
   language-vue
   language-pug
   autoclose-html

@@ -9,7 +9,7 @@ sudo apt-add-repository -y ppa:tista/adapta
 # Paper icon theme
 sudo apt-add-repository -y ppa:snwh/pulp
 # Neovim editor
-sudo add-apt-repository -y ppa:neovim-ppa/unstable
+# sudo add-apt-repository -y ppa:neovim-ppa/unstable
 # Atom editor
 sudo add-apt-repository -y ppa:webupd8team/atom
 # Google Chrome
@@ -26,17 +26,14 @@ apps=(
   git
   tmux
   nodejs
-  npm
   vim
   ruby
   build-essential
   cmake
   python3-dev
   python3-pip
-  neovim
   atom
   google-chrome-stable
-  firefox
   heroku
   unity-tweak-tool
   adapta-gtk-theme
