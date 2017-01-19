@@ -6,7 +6,6 @@ packages=(
   file-icons
   linter
   linter-eslint
-  linter-jsonlint
   language-vue
   language-pug
   autoclose-html
