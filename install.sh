@@ -41,8 +41,13 @@ for dotfile in ${dotfiles[@]}; do
   ln -sfv "$DOTFILES_DIR/dotfiles/$dotfile" ~
 done
 
-# Atom editor config.cson symlink
-ln -sfv "$DOTFILES_DIR/dotfiles/.atom/config.cson" ~/.atom
+# Atom editor config files symlinks
+ATOM_CONFIG_FILES=$DOTFILES_DIR/dotfiles/.atom/*
+
+mkdir -p ~/.atom
+for file in $ATOM_CONFIG_FILES; do
+  ln -sfv "$file" ~/.atom
+done
 
 # Neovim init.vim symlink
 ln -sfv "$DOTFILES_DIR/dotfiles/init.vim" ~/.config/nvim
