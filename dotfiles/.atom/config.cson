@@ -12,6 +12,7 @@
       compactList: true
     ui:
       panelContrast: true
+  "autoclose-html": {}
   core:
     autoHideMenuBar: true
     ignoredNames: [
@@ -27,11 +28,12 @@
     telemetryConsent: "limited"
     themes: [
       "atom-material-ui"
-      "one-dark-syntax"
+      "atom-material-syntax"
     ]
   editor:
     fontSize: 13
     scrollPastEnd: true
+    softWrap: true
     zoomFontWhenCtrlScrolling: false
   "git-plus":
     general:
