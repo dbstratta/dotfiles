@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=sh -c "sleep 3; python3 ~/dotfiles/autostart/scripts/background.py"
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=Background
+Name=Background
+Comment[en_US]=Set Bing's wallpaper of the day as background
+Comment=Set Bing's wallpaper of the day as background
