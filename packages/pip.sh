@@ -2,6 +2,8 @@
 
 # Packages
 packages=(
+  powerline-status
+  requests
   neovim
   pep8
 )
