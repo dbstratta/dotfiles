@@ -6,9 +6,11 @@ packages=(
   file-icons
   linter
   linter-eslint
+  linter-pep8
   language-vue
   language-pug
   autoclose-html
+  autocomplete-python
   autocomplete-paths
   pigments
   atom-clock
