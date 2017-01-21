@@ -1,3 +1,21 @@
+#!/usr/bin/env python3
+
+"""
+Bing's wallpaper of the day background setter
+
+Hits Bing's wallpaper API and compares the wallpaper of the day
+with the OS's current one.
+
+If they are the same, the script does nothing.
+
+If they are different, it downloads the new wallpaper and sets it,
+then remove the old one.
+
+Usage:
+======
+(1) Put this script in your startup applications.
+"""
+
 import os
 import requests
 import json
@@ -8,14 +26,14 @@ response = requests.get(url)
 
 data = json.loads(response.text)
 image_url_pathname = data['images'][0]['url']
-image_filename = image_url_pathname[16:]
+image_filename = image_url_pathname.split('/')[-1]
 
-local_images_dir = os.path.expanduser('~') + '/Pictures/wallpaper/'
+local_images_dir = '{}/Pictures/wallpaper/'.format(os.path.expanduser('~'))
 local_images = os.listdir(local_images_dir)
 
 # Check if the current background is not the same as Bing's
-if not local_images or (local_images and (local_images[0] != image_filename)):
-    image_url = 'https://www.bing.com' + image_url_pathname
+if not local_images or local_images[0] != image_filename:
+    image_url = 'https://www.bing.com{}'.format(image_url_pathname)
 
     # Perform a GET to the image URL
     image = requests.get(image_url).content
