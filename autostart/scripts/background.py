@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-Bing's wallpaper of the day background setter
+Bing's Wallpaper of the Day Background Setter
 
 Hits Bing's wallpaper API and compares the wallpaper of the day
 with the OS's current one.
