@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 # Remove previously added repositories (to remain idempontent)
 sudo rm -f /etc/apt/sources.list.d/*
@@ -22,7 +22,7 @@ curl -L https://cli-assets.heroku.com/apt/release.key | sudo apt-key add -
 curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
 
 # Packages
-apps=(
+export apt_packages=(
   git
   tmux
   nodejs
@@ -43,6 +43,3 @@ apps=(
 # Update & upgrade
 sudo apt update
 sudo apt upgrade -y
-
-# Install packages
-sudo apt install -y "${apps[@]}"

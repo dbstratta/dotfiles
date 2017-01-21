@@ -1,15 +1,12 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 # Globally install with npm
-
-packages=(
-  webpack@beta
-  webpack-dev-server@beta
+export npm_packages=(
+  webpack
+  webpack-dev-server
   karma-cli
   eslint
 )
-
-sudo npm install -g "${packages[@]}"
 
 # Update all global packages, especially npm itself
 sudo npm update -g

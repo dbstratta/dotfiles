@@ -1,31 +1,27 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 # Get current dir (so run this script from anywhere)
-
 export DOTFILES_DIR
 DOTFILES_DIR="$( builtin cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Update dotfiles itself first
-
 [ -d "$DOTFILES_DIR/.git" ] && git --work-tree="$DOTFILES_DIR" \
 --git-dir="$DOTFILES_DIR/.git" pull origin master
 
-# Package managers & packages
-
-. "$DOTFILES_DIR/packages/apt.sh"
-. "$DOTFILES_DIR/packages/npm.sh"
-. "$DOTFILES_DIR/packages/gem.sh"
-. "$DOTFILES_DIR/packages/apm.sh"
-. "$DOTFILES_DIR/packages/pip.sh"
+# Install all packages
+. "$DOTFILES_DIR/packages/install.sh"
 
 # Settings and fonts
-
 . "$DOTFILES_DIR/settings/downloads.sh"
 . "$DOTFILES_DIR/settings/settings.sh"
 . "$DOTFILES_DIR/fonts/setup.sh"
 
-# Dotfiles to symlink
+# Create needed folders
+mkdir -p ~/workspace
+mkdir -p ~/projects
+mkdir -p ~/Pictures/wallpaper
 
+# Dotfiles to symlink
 dotfiles=(
   ".bashrc"
   ".bash_aliases"
@@ -33,21 +29,17 @@ dotfiles=(
   ".tmux.conf"
   ".tern-config"
   ".gitconfig"
+  ".editorconfig"
+  ".eslintrc.js"
 )
 
-# Create needed folders
-mkdir -p ~/workspace
-mkdir -p ~/Pictures/wallpaper
-
 # Make the symlinks
-
 for dotfile in ${dotfiles[@]}; do
   ln -sfv "$DOTFILES_DIR/dotfiles/$dotfile" ~
 done
 
 # Atom editor config files symlinks
 ATOM_CONFIG_FILES=$DOTFILES_DIR/dotfiles/.atom/*
-
 mkdir -p ~/.atom
 for file in $ATOM_CONFIG_FILES; do
   ln -sfv "$file" ~/.atom
@@ -56,18 +48,12 @@ done
 # Neovim init.vim symlink
 ln -sfv "$DOTFILES_DIR/dotfiles/init.vim" ~/.config/nvim
 
-# .tmuxinator layouts
-MUX_LAYOUTS=$DOTFILES_DIR/dotfiles/.tmuxinator/*
-
-mkdir -p ~/.tmuxinator
-for file in $MUX_LAYOUTS; do
-  ln -sfv "$file" ~/.tmuxinator
-done
+# Tmuxinator layouts
+MUX_LAYOUTS_DIR=$DOTFILES_DIR/dotfiles/.tmuxinator/
+ln -sfv "$MUX_LAYOUTS_DIR" ~/
 
 # Symlink autostart scripts
-AUTOSTART_SCRIPTS=$DOTFILES_DIR/autostart/*
-
-mkdir -p ~/.config/autostart
-for script in $AUTOSTART_SCRIPTS; do
-  ln -sfv "$script" ~/.config/autostart
-done
+AUTOSTART_SCRIPTS=$DOTFILES_DIR/autostart/
+# In case the directory already exists
+rm -rf ~/.config/autostart
+ln -sfv "$AUTOSTART_SCRIPTS" ~/.config

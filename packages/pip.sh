@@ -1,15 +1,12 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 # Packages
 packages=(
   powerline-status
   requests
   neovim
-  pep8
+  flake8
 )
 
 # Update pip itself
 pip3 install --upgrade pip
-
-# Install packages
-pip3 install --user --upgrade "${packages[@]}"

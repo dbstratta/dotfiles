@@ -1,11 +1,6 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 # Gems
-gems=(
+export gem_packages=(
   tmuxinator
 )
-
-# Install gems
-for gem in ${gems[@]}; do
-  sudo gem install $gem
-done

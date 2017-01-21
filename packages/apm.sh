@@ -1,6 +1,6 @@
-#!usr/bin/bash
+#!/usr/bin/env bash
 
-packages=(
+export apm_packages=(
   vim-mode-plus
   vim-mode-plus-ex-mode
   file-icons
@@ -17,6 +17,3 @@ packages=(
   editorconfig
   atom-material-ui
 )
-
-# Install packages
-apm install "${packages[@]}"
