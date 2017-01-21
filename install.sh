@@ -35,6 +35,10 @@ dotfiles=(
   ".gitconfig"
 )
 
+# Create needed folders
+mkdir -p ~/workspace
+mkdir -p ~/Pictures/wallpaper
+
 # Make the symlinks
 
 for dotfile in ${dotfiles[@]}; do
@@ -67,4 +71,3 @@ mkdir -p ~/.config/autostart
 for script in $AUTOSTART_SCRIPTS; do
   ln -sfv "$script" ~/.config/autostart
 done
-
