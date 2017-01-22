@@ -1,4 +1,6 @@
 "*":
+  "atom-beautify":
+    general: {}
   "atom-clock": {}
   "atom-material-ui":
     colors:
