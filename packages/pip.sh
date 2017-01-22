@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Packages
-packages=(
+export pip_packages=(
   powerline-status
   requests
   neovim

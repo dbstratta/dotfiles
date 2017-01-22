@@ -8,7 +8,7 @@
 . "$DOTFILES_DIR/packages/pip.sh"
 
 sudo apt install -y "${apt_packages[@]}"
-pip3 install --user --upgrade "${packages[@]}"
-sudo npm install -g "${packages[@]}"
+pip3 install --user --upgrade "${pip_packages[@]}"
+sudo npm install -g "${npm_packages[@]}"
 apm install "${apm_packages[@]}"
 sudo gem install "${gem_packages[@]}""
