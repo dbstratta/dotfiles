@@ -29,6 +29,7 @@ dotfiles=(
   ".tmux.conf"
   ".tern-config"
   ".gitconfig"
+  ".gtkrc-2.0"
   ".editorconfig"
   ".eslintrc.js"
 )
@@ -51,6 +52,20 @@ ln -sfv "$DOTFILES_DIR/dotfiles/init.vim" ~/.config/nvim
 # Tmuxinator layouts
 MUX_LAYOUTS_DIR=$DOTFILES_DIR/dotfiles/.tmuxinator/
 ln -sfv "$MUX_LAYOUTS_DIR" ~/
+
+# Powerline config files
+POWERLINE_CONFIG_DIR=$DOTFILES_DIR/dotfiles/.config/powerline/
+rm -rf ~/.config/powerline
+ln -sfv "$POWERLINE_CONFIG_DIR" ~/.config
+
+# i3 config files
+I3_CONFIG_DIR=$DOTFILES_DIR/dotfiles/.config/i3/
+rm -rf ~/.config/i3
+ln -sfv "$I3_CONFIG_DIR" ~/.config
+
+# GTK3 config file
+ln -sfv "$DOTFILES_DIR/dotfiles/.config/gtk-3.0/settings.ini" \
+  ~/.config/gtk-3.0
 
 # Symlink autostart scripts
 AUTOSTART_SCRIPTS=$DOTFILES_DIR/autostart/
