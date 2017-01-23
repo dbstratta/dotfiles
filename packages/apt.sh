@@ -20,6 +20,9 @@ sudo add-apt-repository -y "deb https://cli-assets.heroku.com/branches/stable/ap
 curl -L https://cli-assets.heroku.com/apt/release.key | sudo apt-key add -
 # Node.js
 curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+# i3 Window Manager
+sudo sh -c 'echo "deb http://debian.sur5r.net/i3/ $(lsb_release -c -s) universe" >> /etc/apt/sources.list'
+sudo apt-get --allow-unauthenticated install sur5r-keyring
 
 # Packages
 export apt_packages=(
@@ -33,6 +36,7 @@ export apt_packages=(
   python3-dev
   python3-pip
   atom
+  i3
   google-chrome-stable
   heroku
   unity-tweak-tool
