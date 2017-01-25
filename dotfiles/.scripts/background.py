@@ -40,15 +40,16 @@ if not local_images or local_images[0] != image_filename:
     with open(local_images_dir + image_filename, 'wb') as image_file:
         image_file.write(image_content)
 
-    gsettings_command_str = (
-        '/usr/bin/gsettings set org.gnome.desktop.background picture-uri ' +
-        '"file://' + local_images_dir + image_filename + '"'
-    )
-    os.system(gsettings_command_str)
+    feh_command_str = 'feh --bg-scale {}{}'.format(
+        local_images_dir,
+        image_filename)
+    os.system(feh_command_str)
     print('Success!\n')
 
     # Remove old image if it exists
     if local_images:
         os.remove(local_images[0])
 else:
-    print('You already have the latest Bing wallpaper!\n')
+    feh_command_str = 'sh ~/.fehbg'
+    os.system('sh ~/.fehbg')
+    print('Success!\n')

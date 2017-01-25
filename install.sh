@@ -39,6 +39,9 @@ for dotfile in ${dotfiles[@]}; do
   ln -sfv "$DOTFILES_DIR/dotfiles/$dotfile" ~
 done
 
+SCRIPTS_DIR=$DOTFILES_DIR/dotfiles/.scripts/
+ln -sfv "$SCRIPTS_DIR" ~/
+
 # Atom editor config files symlinks
 ATOM_CONFIG_FILES=$DOTFILES_DIR/dotfiles/.atom/*
 mkdir -p ~/.atom

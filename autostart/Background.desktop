@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=sh -c "sleep 2; python3 ~/.config/autostart/scripts/background.py"
+Exec=sh -c "sleep 2; python3 ~/.scripts/background.py"
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
