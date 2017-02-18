@@ -44,5 +44,10 @@ I3_CONFIG_DIR=$REPO_DIR/dotfiles/.config/i3/
 rm -rf ~/.config/i3
 ln -sfv "$I3_CONFIG_DIR" ~/.config
 
+# Termite config files
+TERMITE_CONFIG_DIR=$REPO_DIR/dotfiles/.config/termite/
+rm -rf ~/.config/termite
+ln -sfv "$TERMITE_CONFIG_DIR" ~/.config
+
 # GTK3 config file
 ln -sfv "$REPO_DIR/dotfiles/.config/gtk-3.0/settings.ini" ~/.config/gtk-3.0

@@ -147,6 +147,9 @@ bar {
 new_window pixel 2
 hide_edge_borders smart
 
+# Start Compton
+# exec compton --config ~/dotfiles/dotfiles/.compton.conf -b
+
 # Map Caps Lock to Super when held and Escape when tapped
 exec setxkbmap -option caps:super
 exec xcape -e 'Super_L=Escape'
