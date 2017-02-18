@@ -1,12 +1,10 @@
-#!/usr/bin/env bash
-
 export apm_packages=(
   vim-mode-plus
   vim-mode-plus-ex-mode
   file-icons
   linter
   linter-eslint
-  linter-pep8
+  linter-flake8
   language-vue
   language-pug
   autoclose-html
@@ -16,4 +14,5 @@ export apm_packages=(
   atom-clock
   editorconfig
   atom-material-ui
+  atom-material-syntax
 )

@@ -13,7 +13,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 
 " YouCompleteMe
-Plug 'Valloric/YouCompleteMe', {'do': 'python3 ./install.py --clang-completer --tern-completer'}
+Plug 'Valloric/YouCompleteMe', {'do': 'python ./install.py --clang-completer --tern-completer'}
 
 " Vim Gitgutter
 Plug 'airblade/vim-gitgutter'
@@ -122,4 +122,4 @@ set completeopt-=preview
 let g:AutoPairsShortcutToggle = ''
 
 " Make YouCompleteMe work
-let g:ycm_server_python_interpreter = '/usr/bin/python3'
+let g:ycm_server_python_interpreter = '/usr/bin/python'

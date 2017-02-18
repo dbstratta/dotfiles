@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
 
 # Source all the packages lists
-. "$DOTFILES_DIR/packages/apt.sh"
-. "$DOTFILES_DIR/packages/npm.sh"
-. "$DOTFILES_DIR/packages/gem.sh"
-. "$DOTFILES_DIR/packages/apm.sh"
-. "$DOTFILES_DIR/packages/pip.sh"
+. "$REPO_DIR/packages/pacman.sh"
+. "$REPO_DIR/packages/pip.sh"
+. "$REPO_DIR/packages/apm.sh"
 
-sudo apt install -y "${apt_packages[@]}"
-pip3 install --user --upgrade "${pip_packages[@]}"
-sudo npm install -g "${npm_packages[@]}"
+# Update packages
+sudo pacman -Syu
+pip install --upgrade pip
+sudo npm update -g
+
+# Install all the packages
+sudo pacman -Sy --noconfirm "${pacman_packages[@]}"
+pip install --user --upgrade "${pip_packages[@]}"
 apm install "${apm_packages[@]}"
-sudo gem install "${gem_packages[@]}""
