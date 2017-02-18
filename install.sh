@@ -14,7 +14,7 @@ REPO_DIR="$( builtin cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Settings and fonts
 . "$REPO_DIR/settings/downloads.sh"
 . "$REPO_DIR/settings/settings.sh"
-. "$REPO_DIR/fonts/setup.sh"
+#. "$REPO_DIR/fonts/setup.sh"
 
 # Create needed folders
 mkdir -p ~/workspace
@@ -22,7 +22,7 @@ mkdir -p ~/projects
 mkdir -p ~/wallpapers
 
 # Dotfiles symlinks
-DOTFILES=$REPO_DIR/dotfiles/*
+DOTFILES=$REPO_DIR/dotfiles/.*
 for dotfile in $DOTFILES; do
   if [[ -f $dotfile ]]; then
     ln -sfv "$dotfile" ~
