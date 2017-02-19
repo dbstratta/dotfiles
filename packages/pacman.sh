@@ -1,7 +1,9 @@
 export pacman_packages=(
+  acpi
   git
   networkmanager
   bash-completion
+  alsa-utils
   pulseaudio
   pavucontrol
   i3
@@ -9,6 +11,8 @@ export pacman_packages=(
   ttf-dejavu
   termite
   htop
+  feh
+  pcmanfm-gtk3
   python-pip
   yaourt
   vim
@@ -16,4 +20,5 @@ export pacman_packages=(
   nodejs
   npm
   xcape
+  screenfetch
 )
