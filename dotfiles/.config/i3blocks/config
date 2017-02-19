@@ -1,0 +1,63 @@
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+command=/usr/lib/i3blocks/$BLOCK_NAME
+separator_block_width=15
+markup=none
+
+[volume]
+label=
+instance=Master
+interval=2
+signal=10
+command=/usr/lib/i3blocks/volume 5 pulse
+
+[memory]
+label=MEM
+interval=30
+
+[disk]
+label=
+interval=60
+
+[wifi]
+interval=10
+
+[cpu_usage]
+label=CPU
+interval=10
+min_width=CPU: 100.00%
+
+#[load_average]
+#interval=10
+
+[battery]
+label=BAT
+interval=60
+
+[time]
+command=date '+%Y-%m-%d %H:%M:%S'
+interval=1
+
+# Generic media player support
+#
+# This displays "ARTIST - SONG" if a music is playing.
+# Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
+#[mediaplayer]
+#instance=spotify
+#interval=5
+#signal=10
