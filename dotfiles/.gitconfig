@@ -9,21 +9,21 @@
   ui = auto
 
 [color "branch"]
-  current = yellow bold
-  local = green bold
-  remote = cyan bold
+  current = "#FFEB3B" bold
+  local = "#4CAF50" bold
+  remote = "#00BCD4" bold
 
 [color "diff"]
-  meta = yellow bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
-  whitespace = red reverse
+  meta = "#FFEB3B" bold
+  frag = "#9C27B0" bold
+  old = "#F44336" bold
+  new = "#4CAF50" bold
+  whitespace = "#F44336" reverse
 
 [color "status"]
-  added = green bold
-  changed = yellow bold
-  untracked = red bold
+  added = "#4CAF50" bold
+  changed = "#FFEB3B" bold
+  untracked = "#F44336" bold
 
 [github]
   user = strattadb
