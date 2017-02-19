@@ -12,8 +12,8 @@ REPO_DIR="$( builtin cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . "$REPO_DIR/packages/install.sh"
 
 # Settings and fonts
-. "$REPO_DIR/settings/downloads.sh"
-. "$REPO_DIR/settings/settings.sh"
+. "$REPO_DIR/misc/downloads.sh"
+. "$REPO_DIR/misc/settings.sh"
 
 # Create needed folders
 mkdir -p ~/workspace
