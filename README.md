@@ -2,10 +2,7 @@
 
 ## Information
 
-As of today, it works only on Debian / Ubuntu with Unity 7.
-
-It should still work with other desktop environments,
-but I haven't tested it.
+My configuration for my Arch machines.
 
 ### Note to self
 
@@ -23,22 +20,18 @@ $ git clone ssh://git@github.com/strattadb/dotfiles
 
 To clone the repository you'll need [Git](https://git-scm.com/).
 
-#### Debian / Ubuntu
+#### Arch
 
 ```shell
-$ sudo apt install git
+$ sudo pacman -S git
 ```
 
 ## Installation
 
-Clone the repository to home folder and run `install.sh`.
+Clone the repository to home folder and source `install.sh`.
 
 ```shell
 $ git clone https://github.com/strattadb/dotfiles
 $ cd dotfiles
 $ . install.sh
 ```
-
-## After the installation
-
-* You may want to install proprietary drivers.
