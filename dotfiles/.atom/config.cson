@@ -36,6 +36,8 @@
     scrollPastEnd: true
     softWrap: true
     zoomFontWhenCtrlScrolling: false
+  "exception-reporting":
+    userId: "34004825-6939-4b85-b572-452bbc77dce4"
   linter: {}
   "linter-eslint":
     fixOnSave: true
