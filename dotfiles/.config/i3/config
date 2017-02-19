@@ -3,109 +3,112 @@ set $mod Mod4
 set $workspace1 "1:  "
 set $workspace2 "2:  "
 set $workspace3 "3:  "
+set $workspace4 "4: "
+set $workspace5 "5: "
+set $workspace6 "6: "
+set $workspace7 "7: "
+set $workspace8 "8: "
+set $workspace9 "9: "
 set $workspace0 "10:  "
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
-
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+font pango:DejaVu Sans Mono 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
+# Start a terminal
 bindsym $mod+Return exec termite
 
-# kill focused window
+# Kill focused window
 bindsym $mod+q kill
 
-# start dmenu (a program launcher)
+# Start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
 
-# change focus
-bindsym $mod+h focus left
+# Cycle workspaces
 bindsym $mod+j workspace prev
 bindsym $mod+k workspace next
-bindsym $mod+l focus right
 
-# change focus
+# Change focus with Alt + hjkl
 bindsym Mod1+h focus left
 bindsym Mod1+j focus down
 bindsym Mod1+k focus up
 bindsym Mod1+l focus right
 
-# alternatively, you can use the cursor keys:
+# Alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal orientation
+# Split in horizontal orientation
 bindsym $mod+v split h
 
-# split in vertical orientation
+# Split in vertical orientation
 bindsym $mod+b split v
 
-# enter fullscreen mode for the focused container
+# Enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
-# change container layout (stacked, tabbed, toggle split)
+# Change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
-# toggle tiling / floating
+# Toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
-# change focus between tiling / floating windows
+# Change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-# switch to workspace
+# Switch to workspace
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2
 bindsym $mod+3 workspace $workspace3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
+bindsym $mod+4 workspace $workspace4
+bindsym $mod+5 workspace $workspace5
+bindsym $mod+6 workspace $workspace6
+bindsym $mod+7 workspace $workspace7
+bindsym $mod+8 workspace $workspace8
+bindsym $mod+9 workspace $workspace9
 bindsym $mod+0 workspace $workspace0
 
-# move focused container to workspace
+# Move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $workspace1
 bindsym $mod+Shift+2 move container to workspace $workspace2
 bindsym $mod+Shift+3 move container to workspace $workspace3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+4 move container to workspace $workspace4
+bindsym $mod+Shift+5 move container to workspace $workspace5
+bindsym $mod+Shift+6 move container to workspace $workspace6
+bindsym $mod+Shift+7 move container to workspace $workspace7
+bindsym $mod+Shift+8 move container to workspace $workspace8
+bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace0
 
+# Assign applications to their workspaces
 assign [class="Atom"] $workspace2
-for_window [class="Atom"] focus
-assign [class="Google-chrome"] $workspace3
-for_window [class="Google-chrome"] focus
-assign [class="Chromium"] $workspace3
-for_window [class="Chromium"] focus
 assign [class="Firefox"] $workspace3
-for_window [class="Firefox"] focus
+assign [class="Google-chrome"] $workspace3
+assign [class="Chromium"] $workspace3
 assign [class="Termite"] $workspace1
+
+# Focus window when openend
+for_window [class="Atom"] focus
+for_window [class="Firefox"] focus
+for_window [class="Google-chrome"] focus
+for_window [class="Chromium"] focus
 for_window [class="Termite"] focus
 
-# reload the configuration file
+# Reload the configuration file
 bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+# Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
+# Exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-# resize window (you can also use the mouse for that)
+# Resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
@@ -118,28 +121,58 @@ mode "resize" {
         bindsym l resize shrink height 10 px or 10 ppt
         bindsym semicolon resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
+        # Same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape
+        # Back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
 
 bindsym $mod+r mode "resize"
 
+# Colors!
+set $bg-color #151b1e
+set $bg-color-active #009688
+set $bg-color-inactive #151b1e
+set $text-color #EEFFFF
+set $text-color-active #EEFFFF
+set $text-color-urgent #F07178
+set $text-color-inactive #373b41
+set $indicator-color #00FF00
+
+# Class                   Border                Background            Text           Indicator           Child border
+client.focused            $bg-color-active      $bg-color-active      $bg-color      $indicator-color    $bg-color-active
+client.focused_inactive   $bg-color-inactive    $bg-color-inactive    $text-color    $indicator-color    $bg-color
+client.unfocused          $bg-color-inactive    $bg-color-inactive    $text-color    $indicator-color    $bg-color
+client.urgent             $bg-color-inactive    $bg-color-inactive    $text-color    $indicator-color    $bg-color
+client.placeholder        $bg-color-inactive    $bg-color-inactive    $text-color    $indicator-color    $bg-color
+
+client.background         $bg-color
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+    status_command i3blocks
+    colors {
+        background $bg-color
+        statusline $text-color
+        separator #373b41
+
+        # Class               Border        Background    Text
+        focused_workspace     $bg-color     $bg-color     $text-color-active
+        active_workspace      $bg-color     $bg-color     $text-color-active
+        inactive_workspace    $bg-color     $bg-color     $text-color-inactive
+        urgent_workspace      $bg-color     $bg-color     $text-color-urgent
+    }
 }
 
-# Hide borders if there's only one window in a workspace
+# Hide edge borders
 new_window pixel 2
-hide_edge_borders smart
+hide_edge_borders both
 
 # Set a random wallpaper as background
 exec --no-startup-id feh --randomize --bg-scale ~/wallpapers/*
