@@ -29,7 +29,7 @@ for dotfile in $DOTFILES; do
 done
 
 # Fonts symlink
-ln -sfv ~/dotfiles/dotfiles/.fonts ~/
+ln -sfv "$REPO_DIR/dotfiles/.fonts" ~/
 
 SCRIPTS_DIR=$REPO_DIR/dotfiles/.scripts/
 ln -sfv "$SCRIPTS_DIR" ~/
