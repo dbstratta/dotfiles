@@ -5,7 +5,9 @@ export pacman_packages=(
   pulseaudio
   pavucontrol
   i3
-  rxvt-unicode
+  compton
+  ttf-dejavu
+  termite
   htop
   python-pip
   yaourt
