@@ -1,6 +1,27 @@
 [options]
-font = DejaVu Sans Mono 11
+font = DejaVu Sans Mono 12
+mouse_autohide = true
+clickable_url = true
+allow_bold = true
 
 [colors]
-foreground = #dddddd
-background = #111111
+foreground = #eeffff
+background = rgba(38, 50, 56, 0.97)
+cursor = #009688
+
+color0 = #000000
+color1 = #AA0000
+color2 = #00AA00
+color3 = #AA5500
+color4 = #0000AA
+color5 = #AA00AA
+color6 = #00AAAA
+color7 = #AAAAAA
+color8 = #555555
+color9 = #C3E88D
+color10 = #89DDF3
+color11 = #73D1C8
+color12 = #82AAFF
+color13 = #FF55FF
+color14 = #C3E88D
+color15 = #FFFFFF
