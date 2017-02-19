@@ -1,13 +1,24 @@
-# Some cd aliases
+# cd aliases
 alias c..='c ..'
 alias cd..='cd ..'
 alias ..='c ..'
 alias ...='c ../..'
 alias ....='c ../../..'
 
-# APT aliases
-alias upd='sudo apt update'
-alias upg='sudo apt upgrade'
+# Useful aliases
+alias :q='exit'
+alias sl='ls'
+
+# ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Color aliases
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 
 # Git aliases
 alias g='git'
@@ -15,11 +26,3 @@ alias s='git status'
 
 # Neovim aliases
 alias neo='nvim'
-
-# Tmuxinator alias
-alias mux='tmuxinator'
-
-# Do ls after every cd
-function c {
-  builtin cd "$@" && ls
-}
