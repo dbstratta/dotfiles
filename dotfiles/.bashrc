@@ -1,8 +1,5 @@
 # If not running interactively, don't do anything
-case $- in
-    *i*) ;;
-      *) return;;
-esac
+[[ $- != *i* ]] && return
 
 # don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
@@ -25,30 +22,14 @@ shopt -s globstar
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
-
-# set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
-esac
-
 # set EDITOR to vim
-export EDITOR=vim
+export EDITOR=nvim
+export VISUAL=nvim
 
-# colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# Alias definitions.
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
+# Alias definitions
+[ -f ~/.bash_aliases ] && . ~/.bash_aliases
 
 # Functions
-if [ -f ~/.bash_functions ]; then
-    . ~/.bash_functions
-fi
+[ -f ~/.bash_functions ] && . ~/.bash_functions
 
 export PS1="\n\[\e[01;32m\] \u   \h\[\e[m\] \[\e[01;33m\]  \w\[\e[m\] \[\e[01;31m\]\`parse_git_branch\`\[\e[m\]\n "
