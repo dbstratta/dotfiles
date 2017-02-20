@@ -13,9 +13,9 @@ export pacman_packages=(
   htop
   feh
   pcmanfm-gtk3
+  neovim
   python-pip
-  yaourt
-  vim
+  python-neovim
   atom
   nodejs
   npm
