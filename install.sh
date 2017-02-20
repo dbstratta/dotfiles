@@ -29,10 +29,19 @@ for dotfile in $DOTFILES; do
 done
 
 # Fonts symlink
-ln -sfv "$REPO_DIR/dotfiles/.fonts" ~/
+FONTS_DIR=$REPO_DIR/dotfiles/.fonts
+rm -rf ~/.fonts
+ln -sfv "$FONTS_DIR" ~/
 
+# Scripts symlink
 SCRIPTS_DIR=$REPO_DIR/dotfiles/.scripts/
+rm -rf ~/.scripts
 ln -sfv "$SCRIPTS_DIR" ~/
+
+CONFIG_FOLDERS_DIR=$REPO_DIR/dotfiles/.config/*
+for file in $CONFIG_FOLDERS_DIR; do
+  ln -sfv "$file" ~/.config
+done
 
 # Atom editor config files symlinks
 ATOM_CONFIG_FILES=$REPO_DIR/dotfiles/.atom/*
@@ -40,16 +49,3 @@ mkdir -p ~/.atom
 for file in $ATOM_CONFIG_FILES; do
   ln -sfv "$file" ~/.atom
 done
-
-# i3 config files
-I3_CONFIG_DIR=$REPO_DIR/dotfiles/.config/i3/
-rm -rf ~/.config/i3
-ln -sfv "$I3_CONFIG_DIR" ~/.config
-
-# Termite config files
-TERMITE_CONFIG_DIR=$REPO_DIR/dotfiles/.config/termite/
-rm -rf ~/.config/termite
-ln -sfv "$TERMITE_CONFIG_DIR" ~/.config
-
-# GTK3 config file
-ln -sfv "$REPO_DIR/dotfiles/.config/gtk-3.0/settings.ini" ~/.config/gtk-3.0
