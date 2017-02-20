@@ -23,6 +23,9 @@ alias egrep='egrep --color=auto'
 # Git aliases
 alias g='git'
 alias s='git status'
+# Enables completion for alias g
+_completion_loader git
+complete -o bashdefault -o default -o nospace -F _git g
 
 # Neovim aliases
 alias neo='nvim'
