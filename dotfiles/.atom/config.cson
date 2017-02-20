@@ -8,7 +8,8 @@
       accentColor: "#b0e457"
       genAccent: true
       predefinedColor: "Purple"
-    fonts: {}
+    fonts:
+      fontSize: 18
     tabs: {}
     treeView:
       compactList: true
@@ -33,6 +34,7 @@
       "atom-material-syntax"
     ]
   editor:
+    fontSize: 16
     scrollPastEnd: true
     softWrap: true
     zoomFontWhenCtrlScrolling: false
