@@ -2,6 +2,7 @@ export pacman_packages=(
   acpi
   git
   networkmanager
+  openssh
   bash-completion
   alsa-utils
   pulseaudio
