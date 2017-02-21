@@ -12,6 +12,7 @@ export pacman_packages=(
   ttf-dejavu
   termite
   htop
+  sysstat
   feh
   pcmanfm-gtk3
   neovim
