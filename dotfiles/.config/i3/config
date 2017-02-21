@@ -180,10 +180,3 @@ hide_edge_borders both
 
 # Set a random wallpaper as background
 exec --no-startup-id feh --randomize --bg-scale ~/wallpapers/*
-
-# Start Compton
-exec_always compton --config ~/dotfiles/dotfiles/.compton.conf -b
-
-# Map Caps Lock to Super when held and Escape when tapped
-exec_always setxkbmap -option caps:super
-exec_always xcape -e 'Super_L=Escape'

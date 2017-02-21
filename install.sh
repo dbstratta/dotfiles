@@ -9,7 +9,7 @@ REPO_DIR="$( builtin cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 --git-dir="$REPO_DIR/.git" pull origin master
 
 # Install all packages
-. "$REPO_DIR/packages/install.sh"
+. "$REPO_DIR/packages/install_packages.sh"
 
 # Settings and fonts
 . "$REPO_DIR/misc/downloads.sh"
