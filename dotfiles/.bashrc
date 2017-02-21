@@ -32,4 +32,4 @@ export VISUAL=nvim
 # Functions
 [ -f ~/.bash_functions ] && . ~/.bash_functions
 
-export PS1="\n\[\e[01;32m\] \u   \h\[\e[m\] \[\e[01;33m\]  \w\[\e[m\] \[\e[01;31m\]\`parse_git_branch\`\[\e[m\]\n "
+export PS1="\n\[\e[1;38;5;0m\]\u@\h\[\e[m\] \[\e[1;38;5;1m\] \w\[\e[m\] \[\e[1;38;5;5m\]\`parse_git_branch\`\[\e[m\]\n\[\e[1;38;5;7m\]$\[\e[m\] "
