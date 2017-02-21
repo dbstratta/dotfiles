@@ -19,9 +19,6 @@ shopt -s checkwinsize
 # match all files and zero or more directories and subdirectories.
 shopt -s globstar
 
-# make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
 # set EDITOR to vim
 export EDITOR=nvim
 export VISUAL=nvim
@@ -32,4 +29,4 @@ export VISUAL=nvim
 # Functions
 [ -f ~/.bash_functions ] && . ~/.bash_functions
 
-export PS1="\n\[\e[1;38;5;0m\]\u@\h\[\e[m\] \[\e[1;38;5;1m\] \w\[\e[m\] \[\e[1;38;5;5m\]\`parse_git_branch\`\[\e[m\]\n\[\e[1;38;5;7m\]$\[\e[m\] "
+export PS1="\n\[\e[1;38;5;100m\]\u@\h\[\e[m\] \[\e[1;38;5;101m\] \w\[\e[m\] \[\e[1;38;5;105m\]\`parse_git_branch\`\[\e[m\]\n\[\e[1;38;5;107m\]$\[\e[m\] "

@@ -9,16 +9,17 @@ foreground = #eeffff
 background = rgba(38, 50, 56, 0.93)
 cursor = #009688
 
-color0 = #79FF3B
-color1 = #7ADEFF
-color2 = #FFB300
-color3 = #AA5500
-color4 = #0000AA
-color5 = #C0FF00
-color6 = #00AAAA
-color7 = #FFFFFF
+color100 = #79FF3B
+color101 = #7ADEFF
+color102 = #FFB300
+color103 = #AA5500
+color104 = #0000AA
+color105 = #C0FF00
+color106 = #00AAAA
+color107 = #FFFFFF
 
 
+color8 = #FFFFFF
 color9 = #FF3B3B
 color10 = #79FF3B
 color11 = #C0FF00
