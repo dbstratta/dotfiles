@@ -3,27 +3,27 @@
 	email = strattadb@gmail.com
 
 [core]
-	editor = vim
+	editor = nvim
 
 [color]
   ui = auto
 
 [color "branch"]
-  current = "#FFEB3B" bold
-  local = "#4CAF50" bold
-  remote = "#00BCD4" bold
+  current = yellow bold
+  local = green bold
+  remote = cyan bold
 
 [color "diff"]
-  meta = "#FFEB3B" bold
-  frag = "#9C27B0" bold
-  old = "#F44336" bold
-  new = "#4CAF50" bold
-  whitespace = "#F44336" reverse
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+  whitespace = red reverse
 
 [color "status"]
-  added = "#4CAF50" bold
-  changed = "#FFEB3B" bold
-  untracked = "#F44336" bold
+  added = green bold
+  changed = yellow bold
+  untracked = red bold
 
 [github]
   user = strattadb
