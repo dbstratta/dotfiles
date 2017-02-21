@@ -17,21 +17,23 @@
 
 command=/usr/lib/i3blocks/$BLOCK_NAME
 separator_block_width=15
+align=center
+min_width=100
 markup=none
 
 [volume]
-label=
+label= :
 instance=Master
 interval=2
 signal=10
 command=/usr/lib/i3blocks/volume 5 pulse
 
 [memory]
-label=MEM
+label= :
 interval=30
 
 [disk]
-label=
+label= :
 interval=60
 
 [wifi]
@@ -46,11 +48,15 @@ min_width=CPU: 100.00%
 #interval=10
 
 [battery]
-label=BAT
+label= :
 interval=60
 
+[date]
+command=date "+ : %m/%d"
+interval=1
+
 [time]
-command=date '+%Y-%m-%d %H:%M:%S'
+command=date "+ : %H:%M:%S "
 interval=1
 
 # Generic media player support
