@@ -1,5 +1,3 @@
-#!/usr/bin/bash
-
 # Disable mouse acceleration
 sudo sh -c "echo 'Section \"InputClass\"' >> /usr/share/X11/xorg.conf.d/90-mouse.conf"
 sudo sh -c "echo '    Identifier \"mouse\"' >> /usr/share/X11/xorg.conf.d/90-mouse.conf"

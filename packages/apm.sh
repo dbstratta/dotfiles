@@ -1,4 +1,4 @@
-export apm_packages=(
+apm_packages=(
   vim-mode-plus
   vim-mode-plus-ex-mode
   file-icons

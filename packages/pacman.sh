@@ -1,4 +1,4 @@
-export pacman_packages=(
+pacman_packages=(
   acpi
   git
   networkmanager
@@ -18,6 +18,8 @@ export pacman_packages=(
   neovim
   python-pip
   python-neovim
+  python-requests
+  flake8
   atom
   nodejs
   npm

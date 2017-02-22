@@ -1,4 +1,4 @@
-export aur_packages=(
+aur_packages=(
   i3blocks
   adapta-gtk-theme
   paper-icon-theme
