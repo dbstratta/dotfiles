@@ -18,6 +18,7 @@ export REPO_DIR="$( builtin cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 mkdir -p ~/workspace
 mkdir -p ~/projects
 mkdir -p ~/wallpapers
+mkdir -p ~/.config
 
 # Dotfiles symlinks
 for dotfile in "${REPO_DIR}/dotfiles/.*"; do
