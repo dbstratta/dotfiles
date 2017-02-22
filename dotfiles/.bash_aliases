@@ -28,4 +28,4 @@ _completion_loader git
 complete -o bashdefault -o default -o nospace -F _git g
 
 # Neovim aliases
-alias neo='nvim'
+alias vim='nvim'
