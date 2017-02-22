@@ -1,44 +1,27 @@
-" be iMproved, required
-set nocompatible
-
 call plug#begin('~/.vim/plugged')
-
-" Powerline
-Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " NERDTree
 Plug 'scrooloose/nerdtree'
-
 " CtrlP
-Plug 'ctrlpvim/ctrlp.vim'
-
+"Plug 'ctrlpvim/ctrlp.vim'
 " YouCompleteMe
-Plug 'Valloric/YouCompleteMe', {'do': 'python ./install.py --clang-completer --tern-completer'}
-
+"Plug 'Valloric/YouCompleteMe', {'do': 'python ./install.py --clang-completer --tern-completer'}
 " Vim Gitgutter
 Plug 'airblade/vim-gitgutter'
-
 " Auto pair brackets, etc
 Plug 'jiangmiao/auto-pairs'
-
 " Vim Syntastic
-Plug 'vim-syntastic/syntastic'
-
+"Plug 'vim-syntastic/syntastic'
 " Vim Polyglot syntax highlighting
 Plug 'sheerun/vim-polyglot'
-
 " Vue component syntax highlighting
 Plug 'posva/vim-vue'
-
 " EditorConfig
 Plug 'editorconfig/editorconfig-vim'
-
 " One Dark colorscheme
 Plug 'joshdick/onedark.vim'
 
 " all of your plugins must be added before the following line
-
-" required
 call plug#end()
 
 " put your non-plugin stuff after this line
@@ -46,16 +29,14 @@ call plug#end()
 set timeoutlen=1000 ttimeoutlen=0
 
 set encoding=utf-8
-" Always show statusline
-set laststatus=2
 " Hide default mode text (e.g. -- INSERT -- below the statusline)
 set noshowmode
 " Always show tabline
 set showtabline=2
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
-set t_Co=256
+set termguicolors
 " Set font
-set guifont=Roboto\ Mono\ for\ Powerline
+set guifont=DejaVu\ Sans\
 let g:Powerline_symbols = 'fancy'
 " Show line number
 set number
@@ -69,8 +50,6 @@ set scrolloff=8
 " Python
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
 
-" Make tabs smarter (I'm not sure if this one, though)
-set smarttab
 " Changes width of TAB character
 set tabstop=2
 " Number of spaces of each step of autoindent
@@ -80,18 +59,14 @@ set expandtab
 " Affects what happens whith <TAB> and <BS> keys with indentation
 set softtabstop=2
 
-set autoindent
 set smartindent
 
 " Syntax highlighting
-syntax on
 set background=dark
 let g:onedark_termcolors=256
 silent! colorscheme onedark
 " Highlight current line
 set cursorline
-" Highlight search
-set hlsearch
 " Clear search highlight with double Esc
 nnoremap <silent> <Esc><Esc> <Esc>:noh<CR><Esc>
 
@@ -120,6 +95,3 @@ let g:ctrlp_cmd = 'CtrlP'
 set completeopt-=preview
 " Disable auto-pairs shortcuts
 let g:AutoPairsShortcutToggle = ''
-
-" Make YouCompleteMe work
-let g:ycm_server_python_interpreter = '/usr/bin/python'
