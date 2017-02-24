@@ -26,8 +26,8 @@ for dotfile in "${REPO_DIR}/dotfiles/.*"; do
 done
 
 # Fonts symlink
-rm -rf ~/.fonts
-ln -sfvn "${REPO_DIR}/fonts" ~/.fonts
+rm -rf ~/.local/share/fonts
+ln -sfvn "${REPO_DIR}/fonts" ~/.local/share/fonts
 
 # Scripts symlink
 rm -rf ~/.scripts
