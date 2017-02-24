@@ -11,7 +11,7 @@ If you're in one of your machines,
 and clone the repo with:
 
 ```shell
-$ git clone ssh://git@github.com/strattadb/dotfiles
+$ git clone git@github.com:strattadb/dotfiles.git
 ```
 
 ## Prerequisites
