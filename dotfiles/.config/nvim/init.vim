@@ -1,24 +1,12 @@
 call plug#begin('~/.vim/plugged')
 
-" NERDTree
 Plug 'scrooloose/nerdtree'
-" CtrlP
 "Plug 'ctrlpvim/ctrlp.vim'
-" YouCompleteMe
 "Plug 'Valloric/YouCompleteMe', {'do': 'python ./install.py --clang-completer --tern-completer'}
-" Vim Gitgutter
 Plug 'airblade/vim-gitgutter'
-" Auto pair brackets, etc
 Plug 'jiangmiao/auto-pairs'
-" Vim Syntastic
-"Plug 'vim-syntastic/syntastic'
-" Vim Polyglot syntax highlighting
 Plug 'sheerun/vim-polyglot'
-" Vue component syntax highlighting
-Plug 'posva/vim-vue'
-" EditorConfig
 Plug 'editorconfig/editorconfig-vim'
-" One Dark colorscheme
 Plug 'joshdick/onedark.vim'
 
 " all of your plugins must be added before the following line
@@ -33,10 +21,10 @@ set encoding=utf-8
 set noshowmode
 " Always show tabline
 set showtabline=2
-" Use 256 colours (Use this setting only if your terminal supports 256 colours)
+" Use true colors
 set termguicolors
 " Set font
-set guifont=DejaVu\ Sans\
+set guifont=Inconsolata\ for\ Powerline
 let g:Powerline_symbols = 'fancy'
 " Show line number
 set number
@@ -63,7 +51,6 @@ set smartindent
 
 " Syntax highlighting
 set background=dark
-let g:onedark_termcolors=256
 silent! colorscheme onedark
 " Highlight current line
 set cursorline
@@ -95,3 +82,6 @@ let g:ctrlp_cmd = 'CtrlP'
 set completeopt-=preview
 " Disable auto-pairs shortcuts
 let g:AutoPairsShortcutToggle = ''
+
+highlight Normal guibg=none
+highlight NonText guibg=none
