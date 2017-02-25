@@ -10,15 +10,15 @@ export REPO_DIR="$( builtin cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Install all packages
 . "${REPO_DIR}/packages/install_packages.sh"
 
-# Settings and fonts
+# Some stuff
 . "${REPO_DIR}/misc/downloads.sh"
 . "${REPO_DIR}/misc/settings.sh"
 
 # Create some folders
 mkdir -p ~/workspace
 mkdir -p ~/projects
-mkdir -p ~/wallpapers
 mkdir -p ~/.config
+mkdir -p ~/.atom
 
 # Dotfiles symlinks
 for dotfile in "${REPO_DIR}/dotfiles/.*"; do
@@ -32,6 +32,10 @@ ln -sfvn "${REPO_DIR}/fonts" ~/.local/share/fonts
 # Scripts symlink
 rm -rf ~/.scripts
 ln -sfvn "${REPO_DIR}/scripts" ~/.scripts
+
+# Wallpapers symlink
+rm -rf ~/wallpapers
+ln -sfvn "${REPO_DIR}/wallpapers" ~/wallpapers
 
 # Config files symlinks
 ln -sfv "${REPO_DIR}/dotfiles/.config/*" ~/.config/
