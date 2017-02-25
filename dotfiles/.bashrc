@@ -20,7 +20,6 @@ shopt -s checkwinsize
 shopt -s globstar
 
 # Enable Vi mode
-set -o vi
 
 # Set EDITOR to vim
 export EDITOR=nvim
