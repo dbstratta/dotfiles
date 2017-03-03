@@ -51,6 +51,7 @@ set smartindent
 
 " Syntax highlighting
 set background=dark
+let g:onedark_terminal_italics = 1
 silent! colorscheme onedark
 " Highlight current line
 set cursorline
@@ -83,5 +84,3 @@ set completeopt-=preview
 " Disable auto-pairs shortcuts
 let g:AutoPairsShortcutToggle = ''
 
-highlight Normal guibg=none
-highlight NonText guibg=none
