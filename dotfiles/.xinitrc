@@ -23,9 +23,8 @@ fi
 # Start Compton
 compton --config ~/.config/compton/config -b
 
-# Map Caps Lock to Super when held and Escape when tapped
-setxkbmap -option caps:super
-xcape -e 'Super_L=Escape'
+# Swap Escape with Caps Lock
+setxkbmap -option caps:swapescape
 
 # Start the windows manager
 exec i3
