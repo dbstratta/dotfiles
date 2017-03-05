@@ -43,3 +43,6 @@ ln -sfv "${REPO_DIR}/dotfiles/.config/*" ~/.config/
 # Atom editor config files symlinks
 mkdir -p ~/.atom
 ln -sfv "${REPO_DIR}/dotfiles/.atom/*" ~/.atom/
+
+# Change keyboard layout to Dvorak
+localectl set-keymap dvorak
