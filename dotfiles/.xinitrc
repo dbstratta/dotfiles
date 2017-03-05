@@ -25,6 +25,7 @@ compton --config ~/.config/compton/config -b
 
 # Swap Escape with Caps Lock
 setxkbmap -option caps:swapescape
+setxkbmap -variant dvorak
 
 # Start the windows manager
 exec i3
