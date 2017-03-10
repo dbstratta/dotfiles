@@ -44,5 +44,3 @@ ln -sfv "${REPO_DIR}/dotfiles/.config/*" ~/.config/
 mkdir -p ~/.atom
 ln -sfv "${REPO_DIR}/dotfiles/.atom/*" ~/.atom/
 
-# Change keyboard layout to Dvorak
-localectl set-keymap dvorak
