@@ -17,6 +17,7 @@ pacman_packages=(
   feh
   pcmanfm-gtk3
   neovim
+  scrot
   python-pip
   python-neovim
   python-requests
