@@ -26,5 +26,8 @@ compton --config ~/.config/compton/config -b
 # Swap Escape with Caps Lock
 setxkbmap -option caps:swapescape
 
+# Set random wallpaper
+feh --randomize --bg-scale ~/wallpapers/*
+
 # Start the windows manager
 exec i3

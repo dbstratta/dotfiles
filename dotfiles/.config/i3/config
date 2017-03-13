@@ -177,6 +177,3 @@ bar {
 # Hide edge borders
 new_window pixel 2
 hide_edge_borders both
-
-# Set a random wallpaper as background
-exec --no-startup-id feh --randomize --bg-scale ~/wallpapers/*
