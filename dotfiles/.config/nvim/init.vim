@@ -84,3 +84,6 @@ set completeopt-=preview
 " Disable auto-pairs shortcuts
 let g:AutoPairsShortcutToggle = ''
 
+" Make background transparent
+highlight Normal guibg=none
+highlight NonText guibg=none
