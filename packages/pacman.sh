@@ -15,6 +15,8 @@ pacman_packages=(
   htop
   sysstat
   feh
+  mpd
+  ncmpcpp
   pcmanfm-gtk3
   neovim
   scrot
