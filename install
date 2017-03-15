@@ -17,6 +17,7 @@ export REPO_DIR="$( builtin cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Create some folders
 mkdir -p ~/workspace
 mkdir -p ~/projects
+mkdir -p ~/envs
 mkdir -p ~/.config
 mkdir -p ~/.atom
 
