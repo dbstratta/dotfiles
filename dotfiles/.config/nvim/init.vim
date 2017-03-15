@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
+Plug 'neomake/neomake'
 "Plug 'ctrlpvim/ctrlp.vim'
 "Plug 'Valloric/YouCompleteMe', {'do': 'python ./install.py --clang-completer --tern-completer'}
 Plug 'airblade/vim-gitgutter'
@@ -58,9 +59,6 @@ set cursorline
 " Clear search highlight with double Esc
 nnoremap <silent> <Esc><Esc> <Esc>:noh<CR><Esc>
 
-" Highlight Vue Components syntax
-" au BufRead,BufNewFile *.vue setfiletype html
-
 " Remap pane navigation
 nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
@@ -75,15 +73,7 @@ map <C-n> :NERDTreeToggle<CR>
 " Close NERDTree if it's the only window left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" Remap CtrlP invokes
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-
 " Diable autocomplete preview window
 set completeopt-=preview
 " Disable auto-pairs shortcuts
 let g:AutoPairsShortcutToggle = ''
-
-" Make background transparent
-highlight Normal guibg=none
-highlight NonText guibg=none
