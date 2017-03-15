@@ -33,6 +33,8 @@ shopt -s cdspell 2> /dev/null
 export EDITOR=nvim
 export VISUAL=nvim
 
+export WORKON_HOME=~/envs
+
 # Alias definitions
 [ -f ~/.bash_aliases ] && . ~/.bash_aliases
 

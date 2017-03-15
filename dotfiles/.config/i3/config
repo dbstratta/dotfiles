@@ -20,12 +20,11 @@ floating_modifier $mod
 
 # Start a terminal
 bindsym $mod+Return exec termite
+# Start dmenu (a program launcher)
+bindsym $mod+d exec dmenu_run
 
 # Kill focused window
 bindsym $mod+q kill
-
-# Start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
 
 # Cycle workspaces
 bindsym $mod+j workspace prev
