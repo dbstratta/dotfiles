@@ -6,7 +6,7 @@ allow_bold = true
 
 [colors]
 foreground = #eeffff
-background = rgba(38, 50, 56, 0.93)
+background = #282C34
 cursor = #009688
 
 color100 = #79FF3B
