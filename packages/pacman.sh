@@ -25,7 +25,7 @@ pacman_packages=(
   python-neovim
   python-requests
   python-jedi
-  flake8
+  python-pylint
   atom
   nodejs
   npm
