@@ -5,6 +5,7 @@ pacman_packages=(
   openssh
   bash-completion
   alsa-utils
+  clang
   pulseaudio
   pavucontrol
   i3
@@ -23,6 +24,7 @@ pacman_packages=(
   python-pip
   python-neovim
   python-requests
+  python-jedi
   flake8
   atom
   nodejs
