@@ -1,0 +1,13 @@
+# Set VI mode
+set editing-mode vi
+set keymap vi-command
+
+# Show mode in prompt
+set show-mode-in-prompt on
+
+# No delay when switching to normal mode in bash
+set keyseq-timeout 0
+
+# Set strings for different VI modes
+set vi-ins-mode-string \1\e[1;38;5;101m\2(insert) \1\e[0m\2
+set vi-cmd-mode-string \1\e[1;38;5;108m\2(normal) \1\e[0m\2
