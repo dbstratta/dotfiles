@@ -1,19 +1,39 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin()
 
 Plug 'scrooloose/nerdtree'
+
+" Compilation and linting
 Plug 'neomake/neomake'
-"Plug 'ctrlpvim/ctrlp.vim'
-"Plug 'Valloric/YouCompleteMe', {'do': 'python ./install.py --clang-completer --tern-completer'}
+
+" Autocompletion
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-jedi'
+Plug 'carlitux/deoplete-ternjs'
+Plug 'zchee/deoplete-clang'
+
+
+" Git integration
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+
+" Interface
+Plug 'vim-airline/vim-airline'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
+
+" Motions and general text editing
 Plug 'jiangmiao/auto-pairs'
+
+" Syntax and language integration
 Plug 'sheerun/vim-polyglot'
+
+" Code consistency
 Plug 'editorconfig/editorconfig-vim'
+
+" Colorschemes
 Plug 'joshdick/onedark.vim'
 
-" all of your plugins must be added before the following line
 call plug#end()
-
-" put your non-plugin stuff after this line
 
 set timeoutlen=1000 ttimeoutlen=0
 
@@ -24,9 +44,8 @@ set noshowmode
 set showtabline=2
 " Use true colors
 set termguicolors
-" Set font
-set guifont=Inconsolata\ for\ Powerline
-let g:Powerline_symbols = 'fancy'
+" Let Airline use Powerline fonts
+let g:airline_powerline_fonts = 1
 " Show line number
 set number
 " Show ruler at column 80
@@ -58,6 +77,17 @@ silent! colorscheme onedark
 set cursorline
 " Clear search highlight with double Esc
 nnoremap <silent> <Esc><Esc> <Esc>:noh<CR><Esc>
+
+" Set the Airline theme
+let g:airline_theme='onedark'
+
+" Change cursor shape based on current mode
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE=2
+
+" Deoplete options
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
+let g:deoplete#sources#clang#clang_header = '/usr/include/clang/'
 
 " Remap pane navigation
 nmap <silent> <c-k> :wincmd k<CR>
