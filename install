@@ -39,7 +39,13 @@ rm -rf ~/wallpapers
 ln -sfvn "${REPO_DIR}/wallpapers" ~/wallpapers
 
 # Config files symlinks
-ln -sfv "${REPO_DIR}/dotfiles/.config/*" ~/.config/
+for folder in "${REPO_DIR}/dotfiles/.config/*"; do
+  [ "${folder}" != "nvim" ] && ln -sfv "${folder}" ~/.config/
+done
+
+# Neovim symlink
+mkdir -p ~/.config/nvim
+ln -sfv "${REPO_DIR}/dotfiles/.config/nvim/init.vim" ~/.config/nvim/
 
 # Atom editor config files symlinks
 mkdir -p ~/.atom
