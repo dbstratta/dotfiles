@@ -27,8 +27,6 @@ shopt -s dirspell 2> /dev/null
 # Correct spelling errors in arguments supplied to cd
 shopt -s cdspell 2> /dev/null
 
-# Enable Vi mode
-
 # Set EDITOR to vim
 export EDITOR=nvim
 export VISUAL=nvim
