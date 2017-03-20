@@ -10,4 +10,4 @@ set keyseq-timeout 0
 
 # Set strings for different vi modes
 set vi-ins-mode-string
-set vi-cmd-mode-string \1\e[1;38;5;108m\2(normal) \1\e[0m\2
+set vi-cmd-mode-string \1\e[1;38;5;108m\2 \1\e[0m\2
