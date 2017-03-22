@@ -12,6 +12,7 @@ pacman_packages=(
   compton
   ttf-dejavu
   termite
+  ripgrep
   the_silver_searcher
   htop
   sysstat
