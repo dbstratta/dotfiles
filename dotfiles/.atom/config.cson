@@ -18,6 +18,21 @@
   "autoclose-html": {}
   core:
     autoHideMenuBar: true
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".hgrc"
+      ]
+      "source.json": [
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
+    disabledPackages: [
+      "nuclide"
+      "linter-flake8"
+    ]
     ignoredNames: [
       ".git"
       ".hg"
@@ -44,6 +59,7 @@
   "linter-eslint":
     fixOnSave: true
     lintHtmlFiles: true
+  "linter-ui-default": {}
   "one-dark-ui": {}
   "tree-view":
     hideIgnoredNames: true

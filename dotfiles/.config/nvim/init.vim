@@ -73,6 +73,10 @@ set completeopt-=preview
 
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
 
+" ================================== Syntax =================================
+
+au BufRead,BufNewFile *.vue setfiletype html
+
 " =============================== Keybindings ===============================
 
 " Map space as leader
@@ -116,9 +120,9 @@ let g:onedark_terminal_italics = 1
 silent! colorscheme onedark
 
 " Airline settings
-let g:airline_powerline_fonts=1
-let g:airline#extensions#tabline#enabled=1
-let g:airline_theme='tomorrow'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme = 'tomorrow'
 
 " Neomake settings
 autocmd! BufWritePost * Neomake
@@ -138,3 +142,8 @@ let g:fzf_action = {
 
 " AutoPairs settings
 let g:AutoPairsShortcutToggle = ''
+
+" Vim Polyglot
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_flow = 1
+let g:polyglot_disabled = ['vue']
