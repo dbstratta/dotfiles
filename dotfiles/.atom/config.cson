@@ -5,14 +5,14 @@
   "atom-material-ui":
     colors:
       abaseColor: "#7e57c2"
-      accentColor: "#b0e457"
+      accentColor: "#acdd55"
       genAccent: true
       predefinedColor: "Purple"
     fonts:
       fontSize: 18
     tabs: {}
     treeView:
-      compactList: true
+      compactList: false
     ui:
       panelContrast: true
   "autoclose-html": {}
