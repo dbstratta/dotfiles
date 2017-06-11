@@ -1,15 +1,7 @@
 #!/usr/bin/env python3
 
 """
-Bing's Wallpaper of the Day Background Setter
-
-Hits Bing's wallpaper API and compares the wallpaper of the day
-with the OS's current one.
-
-If they are the same, the script does nothing.
-
-If they are different, it downloads the new wallpaper and sets it,
-then remove the old one.
+Bing's Wallpaper of the Day Background Setter.
 
 Usage:
 ======
@@ -33,6 +25,7 @@ class Background(object):
         os.path.expanduser('~'))
 
     def __init__(self):
+        self.path = None
         self.content = None
         self.fetch_background_data()
 
@@ -47,6 +40,7 @@ class Background(object):
         url_pathname = response['images'][0]['url']
         self.url = self.BING_API_URL + url_pathname
         self.name = self.url.split('/')[-1]
+        self.path = self.LOCAL_BACKGROUND_FOLDER_PATH + self.name
 
     def fetch_background(self):
         """Fetches and sets the background's content."""
@@ -54,20 +48,31 @@ class Background(object):
 
     def save_background(self, content, path, filename):
         """Saves the background."""
-        with open(self.LOCAL_BACKGROUND_FOLDER_PATH + self.name, 'wb') as file:
+        with open(self.path, 'wb') as file:
             file.write(self.content)
 
-    def set_background(self):
-        feh_command_str = 'feh --bg-scale {}{}'.format(
-            local_images_dir,
-            image_filename)
+    def set_background(self, program):
+        if program == 'feh':
+            command = 'feh --bg-scale {}{}'.format(
+                local_images_dir,
+                image_filename)
+        elif program == 'gsettings':
+            command = 'gsettings'
 
-        subprocess.call(feh_command_str, shell=True)
+        subprocess.call(command, shell=True)
         print('Success!\n')
+
+    def __str__(self):
+        return self.name
 
 
 def main():
     """The script's main function."""
+
+    program = 'feh'
+    new_background = Background()
+
+    new_background.fetch_background()
 
     try:
         Background.remove_local_background_folder()
@@ -76,11 +81,8 @@ def main():
     finally:
         os.mkdir(Background.LOCAL_BACKGROUND_FOLDER_PATH)
 
-    new_background = Background()
-
-    new_background.fetch_background()
     new_background.save_background()
-    #new_background.set_background()
+    new_background.set_background(program)
 
 
 if __name__ == '__main__':
