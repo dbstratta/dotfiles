@@ -17,7 +17,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # Color aliases
-alias ls='ls --color=auto'
+alias ls='ls -G'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
