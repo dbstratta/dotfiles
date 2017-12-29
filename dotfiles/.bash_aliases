@@ -4,6 +4,8 @@ alias cd..='cd ..'
 alias ..='c ..'
 alias ...='c ../..'
 alias ....='c ../../..'
+alias .....='c ../../../../'
+alias ......='c ../../../../../'
 
 # Useful aliases
 alias :q='exit'
@@ -23,9 +25,15 @@ alias egrep='egrep --color=auto'
 # Git aliases
 alias g='git'
 alias s='git status'
-# Enables completion for alias g
-_completion_loader git
+
+# Docker aliases
+alias d='docker'
+alias dco='docker-compose'
+
+# Enables completion for aliases
 complete -o bashdefault -o default -o nospace -F _git g
+complete -o bashdefault -o default -o nospace -F _docker d
+complete -o bashdefault -o default -o nospace -F _docker_compose dco
 
 # Neovim aliases
 alias vim='nvim'
